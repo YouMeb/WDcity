@@ -149,8 +149,9 @@ $(window).scroll(function(e) {
 	if(scroll_position>=5300 && scroll_position <= (6600-wHeight)){
 		$('.title4').css({'position':'fixed','top':0});
 		$('.fct_4').css({'position':'fixed','top':'15%'});
-
+		$('.tppl').css({'position':'fixed'});
 	}else{
+		$('.tppl').css({'position':'absolute','top':' '});
 		$('.title4').css({'position':'absolute','top':''});
 		$('.fct_4').css({'position':'','top':'10%'});
 	}
