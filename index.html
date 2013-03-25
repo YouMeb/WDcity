@@ -350,6 +350,7 @@
 						TweenMax.to($nava, .0, {width : '100%',marginLeft:'-100%',onComplete:s1});
 						function s1(){
 							TweenMax.to($nava, 2, {width : '100%',marginLeft:'100%',delay:2,onComplete:s2});
+							TweenMax.to($('header'), 1, {width : '0%',delay:4.2});
 						}
 						function s2(){
 							TweenMax.to($('#nav'), 1, {width : '',delay:1});
@@ -390,7 +391,8 @@
 						});
 						TweenMax.to($('.hi_logo'), 3, {
 							top : yh,
-							alpha : 1
+							alpha : 1,
+							delay : 5
 						});
 					});
 				</script>
