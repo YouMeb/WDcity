@@ -152,7 +152,7 @@ $(window).scroll(function(e) {
 		$('.tppl').css({'position':'fixed','display':'block'});
 		$('.tppl').attr('src','./images/taipeippl_animation5.gif');
 		$('.textBK4').css({'position':'fixed'});
-		TweenMax.to($('.textBK4') , 3, {alpha:1});
+		TweenMax.to($('.textBK4') , 3, {alpha:1,delay:2});
 
 	}else{
 		$('.tppl').css({'position':'absolute','top':0});

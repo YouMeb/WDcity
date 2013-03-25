@@ -18,7 +18,8 @@ mark, rp, rt, ruby, summary, time {
 /* CSS Document */
 
 body {
-	font-family:'Cuprum', sans-serif;
+	/*font-family:'Cuprum', sans-serif;*/
+	font-family:'微軟正黑體', sans-serif;
 	font-size:15px;
 	line-height:24px;
 	color:#e5e5e5;
