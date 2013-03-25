@@ -6,6 +6,8 @@
 		<title>Taipei Design City</title>
 		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
 		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link href="/assset/module/css3/animate.css/animate.css" rel="stylesheet" type="text/css">
+		
 		<!-- <link rel="stylesheet" href="http://inthe7heaven.com/sense/css/fancybox/jquery.fancybox-buttons.css">
 		<link rel="stylesheet" href="http://inthe7heaven.com/sense/css/fancybox/jquery.fancybox-thumbs.css">
 		<link rel="stylesheet" href="http://inthe7heaven.com/sense/css/fancybox/jquery.fancybox.css"> -->
@@ -140,7 +142,11 @@
 			})
 		</script>
 		<style>
+			article, section {
+				-webkit-transform: translate3d(0,0,0); 
+			}
 			.section_social_wrapper {
+				-webkit-transform: translate3d(0,0,0); 
 				/*display: inline-block;*/
 				display: -webkit-box;
 				display: -moz-box;
@@ -157,6 +163,7 @@
 				float: left;
 			}
 			.section_social_wrapper > div:nth-child(1) {
+				-webkit-transform: translate3d(0,0,0); 
 				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 				-moz-box-sizing: border-box; /* Firefox, other Gecko */
 				box-sizing: border-box; /* Opera/IE 8+ */
@@ -178,8 +185,10 @@
 				 */
 				float: none;
 				margin: 0;
+				padding: 20px 15px;
 			}
 			.section_social_wrapper > div:nth-child(2) {
+				-webkit-transform: translate3d(0,0,0); 
 				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 				-moz-box-sizing: border-box; /* Firefox, other Gecko */
 				box-sizing: border-box; /* Opera/IE 8+ */
@@ -206,6 +215,7 @@
 				height: 100%;
 			}
 			.social_map {
+				-webkit-transform: translate3d(0,0,0); 
 				/**
 				 *
 				 */
@@ -224,20 +234,38 @@
 				height: 100%;
 				padding: 20px 0px 0px 0px;
 			}
+			.elem_opacity {
+				opacity: 0;
+			}
 			.social_map .fb {
 				position: absolute;
 				top: 4%;
 				left: 32%;
+			}
+			.social_map #pop_fb {
+				position: absolute;
+				top: 0%;
+				left: 37%;
 			}
 			.social_map .pinterest {
 				position: absolute;
 				top: 73%;
 				left: 4%;
 			}
+			.social_map #pop_pinterest {
+				position: absolute;
+				top: 73%;
+				left: -14%;
+			}
 			.social_map .youtube {
 				position: absolute;
 				top: 86%;
 				left: 45%;
+			}
+			.social_map #pop_youtube {
+				position: absolute;
+				top: 86%;
+				left: 27%;
 			}
 		</style>
 	</head>
@@ -471,10 +499,13 @@
 
 							<div>
 								<div class="social_map">
-									<img src="./images/logos_Animation.gif" class="logos"/>
-									<img src="./images/fb.png" class="fb" href="www.facebook.com"/>
-									<img src="./images/youtube.png" class="youtube" href="www.youtube.com.tw"/>
-									<img src="./images/pinterest.png" class="pinterest" href="www.pinterest.com"/>
+									<img src="./images/logos4.png" id="logos" class="logos elem_opacity"/>
+									<img src="./images/fb.png" id="social_fb" class="fb elem_opacity animated" href="www.facebook.com"/>
+									<img src="./images/fbBK.png" id="pop_fb" class="elem_opacity animated" style="max-width: 200px;" />
+									<img src="./images/youtube.png" id="social_youtube" class="youtube elem_opacity animated" href="www.youtube.com.tw"/>
+									<img src="./images/youtubeBK.png" id="pop_youtube" class="elem_opacity animated" style="max-width: 200px;" />
+									<img src="./images/pinterest.png" id="social_pinterest" class="pinterest elem_opacity animated" href="www.pinterest.com"/>
+									<img src="./images/pinBK.png" id="pop_pinterest" class="elem_opacity animated" style="max-width: 200px;" />
 								</div>
 							</div>
 						</div>
@@ -546,8 +577,8 @@
 			</div>
 		</div>
 
-		<script>
-			document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+		<script> 
+			// document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 		</script>
 	</body>
 </html>
