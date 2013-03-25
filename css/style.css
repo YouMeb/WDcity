@@ -1383,3 +1383,7 @@ margin-left:20px;
 .slide {
 	width: 100%;
 }
+
+#nav li a {
+	z-index: 9999999999;
+}
