@@ -712,6 +712,9 @@ h3 {
 	left: 0;
 	bottom: 0;
 	width: 100%;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /*IE8*/
+    filter:alpha(opacity=0);  /*IE5、IE5.5、IE6、IE7*/
+    opacity: 0;  
 }
 .a1,.a2,.a3,.a4,.a5,.a6{
 	float: left;

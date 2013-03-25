@@ -1,3 +1,4 @@
+var set1 = 0;
 $(window).scroll(function(e) {
 	
 	/* -------------- parallax scroll ---------------- */	
@@ -36,8 +37,14 @@ $(window).scroll(function(e) {
 		$(".box-about3").stop().animate({ top : (650 * object_speed * 10) + (scroll_position * object_speed)}, delay);	
 		$("#about3-h3").stop().animate({ top : (-980 * object_speed2 * 1.8) + (scroll_position * object_speed2)}, delay);
 	}	
-	var set1 = 0;
-	if(scroll_position >= 1300 && scroll_position <= (2700-wHeight)){
+	if(scroll_position == 1300){
+		if (set1 == 1){
+			TweenMax.to($('.city3cc') , .5, {'display':'block','position':'fixed'});
+			TweenMax.to($('.city2cc') , .5, {'display':'block','position':'fixed'});
+			TweenMax.to($('.city1cc') , .5, {'display':'block','position':'fixed',onComplete:afterset1});
+		}
+	}
+	if(scroll_position >= 1300 && scroll_position < (2700-wHeight)){
 		$('.city3c').css({'position':'fixed','bottom':0});
 		$('.city2c').css({'position':'fixed','bottom':0});
 		$('.city1c').css({'position':'fixed','bottom':0});
@@ -47,11 +54,11 @@ $(window).scroll(function(e) {
 		TweenMax.to($('.city3c') , .5, {alpha:1,delay:2,onComplete:ap1});
 		TweenMax.to($('.city2c') , .5, {alpha:1,delay:1});
 		TweenMax.to($('.city1c') , .5, {alpha:1,delay:0});
-		if (set1 == 1){
-			TweenMax.to($('.city3cc') , .0, {alpha:0});
-			TweenMax.to($('.city2cc') , .0, {alpha:0});
-			TweenMax.to($('.city1cc') , .0, {alpha:0,onComplete:afterset1});
-		}
+		// if (set1 == 1){
+		// 	TweenMax.to($('.city3cc') , .5, {alpha:1,'display':'block','position':'fixed'});
+		// 	TweenMax.to($('.city2cc') , .5, {alpha:1,'display':'block','position':'fixed'});
+		// 	TweenMax.to($('.city1cc') , .5, {alpha:1,'display':'block','position':'fixed',onComplete:afterset1});
+		// }
 	}else{
 		$('.title1').css({'position':'absolute','top':''})
 		$('.city3c').css({'position':'absolute','bottom':0});
@@ -61,9 +68,11 @@ $(window).scroll(function(e) {
 		$('.city2cc').css({'position':'absolute','bottom':0});
 		$('.city1cc').css({'position':'absolute','bottom':0});
 		$('.fct_1').css({'position':'absolute','top':'10%'});
+
 	}
 	//打飛機
 	function ap1(){
+		if(set1 == 0){
 		$('.city3cc').css({'position':'fixed','bottom':0});
 		$('.city2cc').css({'position':'fixed','bottom':0});
 		$('.city1cc').css({'position':'fixed','bottom':0});
@@ -72,6 +81,7 @@ $(window).scroll(function(e) {
 		TweenMax.to($('.city3cc') , .5, {'display':'block',alpha:1,delay:3});
 		TweenMax.to($('.ap') , 10, {alpha:1,top:'-100%',right:'-30%',onComplete:clearoldcld});
 		set1 = 1;
+		}
 	}
 	//打飛機後刪除原來灰色城市背景和飛機殘駭
 	function clearoldcld(){
@@ -82,7 +92,7 @@ $(window).scroll(function(e) {
 	}
 	//回來場景一
 	function afterset1(){
-		weenMax.to($('.city3cc') , .5, {alpha:1,delay:2});
+		TweenMax.to($('.city3cc') , .5, {alpha:1,delay:2});
 		TweenMax.to($('.city2cc') , .5, {alpha:1,delay:1});
 		TweenMax.to($('.city1cc') , .5, {alpha:1,delay:0});
 	}
@@ -90,7 +100,9 @@ $(window).scroll(function(e) {
 		$('.title1').css({'position':'fixed','top':-(scroll_position-(2700-wHeight))})
 	}
 	if(scroll_position>=2700 && scroll_position <= (4000-wHeight)){
-
+		$('.city3cc').css({'display':'none'});
+		$('.city2cc').css({'display':'none'});
+		$('.city1cc').css({'display':'none'});
 		$('.title2').css({'position':'fixed','top':0});
 		$('.MRT').css({'position':'fixed','bottom':0});
 		$('.bike').css({'position':'fixed','bottom':0});
@@ -109,11 +121,14 @@ $(window).scroll(function(e) {
 		$('.w2').css({'position':'relative','bottom':0})
 	}
 	function startbike(){
-		TweenMax.to($('.bike') , 10, {right:'200%',delay:1});
+		TweenMax.to($('.bike') , 10, {right:'200%',delay:1,onComplete:w2start});
 		TweenMax.to($('.train') , 7, {right:'200%',delay:6});
 		TweenMax.to($('.MRT') , 3, {right:'-10%',delay:8.5});
 	}
-
+	function w2start(){
+		TweenMax.to($('.w2') , 3, {alpha:1});
+		
+	}
 	if(scroll_position>= (4000-wHeight)){
 		$('.title2').css({'position':'fixed','top':-(scroll_position-(4000-wHeight))})
 		//$('.fct_2').css({'position':'fixed','top':'20%'});
