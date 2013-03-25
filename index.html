@@ -384,13 +384,18 @@
 						$('header').css({
 							'top' : (wHeight1 - 293) / 2
 						});
-						var yh = (wHeight1 / 2) - 150;
+						var yh = (wHeight1 / 2) - 300;
 						TweenMax.to($('#nav'), 3, {
 							display : 'block',
 							alpha : 1
 						});
 						TweenMax.to($('.hi_logo'), 3, {
 							top : yh,
+							alpha : 1,
+							delay : 5
+						});
+						TweenMax.to($('.pointer'), 3, {
+							marginTop : yh+300,
 							alpha : 1,
 							delay : 5
 						});
@@ -404,6 +409,7 @@
 						</div>
 						<div id="home_img">
 							<img src="./images/index_logo.png" class="hi_logo"/>
+							<img src="./images/bg_0.png" class="pointer" />
 							<figure class="home-img1 z1"></figure>
 							<figure class="home-img2 z1"></figure>
 							<figure class="home-img3 z1"></figure>

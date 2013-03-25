@@ -1387,3 +1387,10 @@ margin-left:20px;
 #nav li a {
 	z-index: 9999999999;
 }
+.pointer{
+	width: 2%;
+	  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /*IE8*/
+    filter:alpha(opacity=0);  /*IE5、IE5.5、IE6、IE7*/
+    opacity: 0; 
+	margin-left:49%; 
+}
