@@ -821,11 +821,23 @@ cursor: pointer;
 	line-height: 30px;
 }
 .textBK4{
-	width: 48%;
+	width: 410px;
 	margin-bottom: 5%;
+	height: 230px;
 	margin-left: 5%;
-	margin-top: -30px;
+	/*margin-top: -30px;*/
 	float: left;
+	background-image: url('../images/textBK4.png');
+	color:#444;
+	padding-top:14px;
+	padding-right:20px;
+	padding-left:20px;
+	z-index: 99999;
+	left: 45%;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /*IE8*/
+    filter:alpha(opacity=0);  /*IE5、IE5.5、IE6、IE7*/
+    opacity: 0;  
+
 }
 /*.tppl{
 	width: 100%;
@@ -839,6 +851,7 @@ cursor: pointer;
 	left: 0;
 	width: 100%;
 	margin-top: -50px;
+	display: none;
 }
 
 /*----------------st5---------------------------*/

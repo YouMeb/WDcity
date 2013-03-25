@@ -149,11 +149,17 @@ $(window).scroll(function(e) {
 	if(scroll_position>=5300 && scroll_position <= (6600-wHeight)){
 		$('.title4').css({'position':'fixed','top':0});
 		$('.fct_4').css({'position':'fixed','top':'15%'});
-		$('.tppl').css({'position':'fixed'});
+		$('.tppl').css({'position':'fixed','display':'block'});
+		$('.tppl').attr('src','./images/taipeippl_animation5.gif');
+		$('.textBK4').css({'position':'fixed'});
+		TweenMax.to($('.textBK4') , 3, {alpha:1});
+
 	}else{
-		$('.tppl').css({'position':'absolute','top':' '});
+		$('.tppl').css({'position':'absolute','top':0});
 		$('.title4').css({'position':'absolute','top':''});
 		$('.fct_4').css({'position':'','top':'10%'});
+		$('.textBK4').css({'position':' ','left':' '});
+		TweenMax.to($('.textBK4') , 1, {alpha:0});
 	}
 	if(scroll_position>= (6600-wHeight)){
 		$('.title4').css({'position':'fixed','top':-(scroll_position-(6600-wHeight))})
