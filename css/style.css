@@ -686,7 +686,7 @@ h3 {
 	margin-top: 50px;
 }
 .ct_1 p {
-	color:#b6be2b;
+	color:#444;
 	font-size: 20px;
 	line-height: 30px;
 	
@@ -722,8 +722,27 @@ h3 {
     filter:alpha(opacity=0);  /*IE5、IE5.5、IE6、IE7*/
     opacity: 0;  
 }
+.city1cc,.city2cc,.city3cc{
+	display: none;
+	position: absolute;
+	width: 100%;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /*IE8*/
+    filter:alpha(opacity=0);  /*IE5、IE5.5、IE6、IE7*/
+    opacity: 0;  
+}
 .fct_1{
 	min-height: 300px;
+}
+.ap{
+	width: 50%;
+	top:200%;
+	right:120%;
+	position: fixed;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /*IE8*/
+    filter:alpha(opacity=0);  /*IE5、IE5.5、IE6、IE7*/
+    opacity: 0; 
+    z-index: 9999999; 
+
 }
 /*----------------st2------------------------*/
 .ct_2{
@@ -748,7 +767,7 @@ h3 {
 	float: left;
 }
 .ct_3 p{
-	color: #89b4c0;
+	color: #444;
 	font-size: 20px;
 	line-height: 30px;
 }
@@ -786,7 +805,7 @@ cursor: pointer;
 	float: left;
 }
 .ct_4 p {
-	color: #d4392a;
+	color: #444;
 	font-size: 20px;
 	line-height: 30px;
 }
@@ -812,7 +831,7 @@ cursor: pointer;
 	margin-bottom:100px;
 }
 .ct_5 p {
-	color: #92202b;
+	color: #444;
 	font-size: 20px;
 }
 .final_logo{

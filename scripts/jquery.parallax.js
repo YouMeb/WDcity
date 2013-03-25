@@ -36,7 +36,7 @@ $(window).scroll(function(e) {
 		$(".box-about3").stop().animate({ top : (650 * object_speed * 10) + (scroll_position * object_speed)}, delay);	
 		$("#about3-h3").stop().animate({ top : (-980 * object_speed2 * 1.8) + (scroll_position * object_speed2)}, delay);
 	}	
-
+	var set1 = 0;
 	if(scroll_position >= 1300 && scroll_position <= (2700-wHeight)){
 		$('.city3c').css({'position':'fixed','bottom':0});
 		$('.city2c').css({'position':'fixed','bottom':0});
@@ -44,9 +44,16 @@ $(window).scroll(function(e) {
 		$('.title1').css({'position':'fixed','top':0})
 		$('.fct_1').css({'position':'fixed'});
 		TweenMax.to($('.fct_1') , .5, {'top':'15%'});
-		TweenMax.to($('.city3c') , .5, {alpha:1});
-		TweenMax.to($('.city2c') , .5, {alpha:1});
-		TweenMax.to($('.city1c') , .5, {alpha:1});
+		TweenMax.to($('.city3c') , .5, {alpha:1,delay:2,onComplete:ap1});
+		TweenMax.to($('.city2c') , .5, {alpha:1,delay:1});
+		TweenMax.to($('.city1c') , .5, {alpha:1,delay:0});
+		if (set1 == 1){
+			TweenMax.to($('.city3cc') , .0, {alpha:0});
+			TweenMax.to($('.city2cc') , .0, {alpha:0});
+			TweenMax.to($('.city1cc') , .0, {alpha:0,onComplete:afterset1});
+
+		}
+
 
 	}else{
 
@@ -54,7 +61,32 @@ $(window).scroll(function(e) {
 		$('.city3c').css({'position':'absolute','bottom':0});
 		$('.city2c').css({'position':'absolute','bottom':0});
 		$('.city1c').css({'position':'absolute','bottom':0});
+		$('.city3cc').css({'position':'absolute','bottom':0});
+		$('.city2cc').css({'position':'absolute','bottom':0});
+		$('.city1cc').css({'position':'absolute','bottom':0});
 		$('.fct_1').css({'position':'absolute','top':'10%'});
+	}
+	function ap1(){
+		$('.city3cc').css({'position':'fixed','bottom':0});
+		$('.city2cc').css({'position':'fixed','bottom':0});
+		$('.city1cc').css({'position':'fixed','bottom':0});
+		TweenMax.to($('.city1cc') , .5, {'display':'block',alpha:1,delay:2});
+		TweenMax.to($('.city2cc') , .5, {'display':'block',alpha:1,delay:2.5});
+		TweenMax.to($('.city3cc') , .5, {'display':'block',alpha:1,delay:3});
+		TweenMax.to($('.ap') , 10, {alpha:1,top:'-100%',right:'-30%',onComplete:clearoldcld});
+		set1 = 1;
+	}
+
+	function clearoldcld(){
+		$('.ap').css('display','none')
+		$('.city3c').css({'display':'none'});
+		$('.city2c').css({'display':'none'});
+		$('.city1c').css({'display':'none'});
+	}
+	function afterset1(){
+		weenMax.to($('.city3cc') , .5, {alpha:1,delay:2});
+		TweenMax.to($('.city2cc') , .5, {alpha:1,delay:1});
+		TweenMax.to($('.city1cc') , .5, {alpha:1,delay:0});
 	}
 	if(scroll_position>= (2700-wHeight)){
 		$('.title1').css({'position':'fixed','top':-(scroll_position-(2700-wHeight))})
@@ -120,7 +152,7 @@ $(window).scroll(function(e) {
 		//TweenMax.to($('.final_logo') , .5, {display:'block',top:0});
 		TweenMax.to($('.allpic') , 1, {display:'block',top:0,alpha:1,delay:10});
 		TweenMax.to($('.gb'), 3000, {rotation: -7200});
-		TweenMax.to($('.final_logo'), 1, {display:'block',top:0,left:0,alpha:1,delay:20});
+		//TweenMax.to($('.final_logo'), 1, {display:'block',top:0,left:0,alpha:1,delay:20});
 		
 	}
 	else{
