@@ -1,387 +1,547 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta charset="utf-8">
-  <title>Taipei Design City</title>
-  <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
-  <link href="css/style.css" rel="stylesheet" type="text/css">
-  <!-- <link rel="stylesheet" href="http://inthe7heaven.com/sense/css/fancybox/jquery.fancybox-buttons.css">
-  <link rel="stylesheet" href="http://inthe7heaven.com/sense/css/fancybox/jquery.fancybox-thumbs.css">
-  <link rel="stylesheet" href="http://inthe7heaven.com/sense/css/fancybox/jquery.fancybox.css"> -->
-  <link rel="icon" href="http://inthe7heaven.com/sense./images/fav_icon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="http://inthe7heaven.com/sense./images/fav_icon.ico" type="image/x-icon">
-  <script id="twitter-wjs" src="scripts/widgets.js"></script>
-  <script type="text/javascript" src="scripts/jquery-1.7.min.js"></script>
-  <!--<script type="text/javascript" src="scripts/jquery.queryloader.js"></script>-->
-  <script type="text/javascript" src="scripts/jquery.scrollTo-1.4.3.js"></script>
-  <script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
-  <script type="text/javascript" src="scripts/jquery.nav.js"></script>
-  <script type="text/javascript" src="scripts/jquery.scrollorama.js"></script>
-  <script type="text/javascript" src="scripts/jquery.localscroll.js"></script>
-  <script type="text/javascript" src="scripts/jquery.equalheights.js"></script> 
-  <script type="text/javascript" src="scripts/forms.js"></script>
-  <script type="text/javascript" src="scripts/jquery.flexslider-min.js"></script>
-  <script type="text/javascript" src="scripts/jquery.elastislide.js"></script>
-  <script type="text/javascript" src="scripts/script.js"></script>
-  <script type="text/javascript" src="scripts/jquery.backgroundPosition.js"></script>
-  <script type="text/javascript" src="scripts/jquery.tweet.js"></script> 
-  <script type="text/javascript" src="scripts/TweenMax.js"></script> 
-  <!-- FancyBox -->      
-  <script src="scripts/jquery.fancybox.js"></script>
-  <script src="scripts/jquery.fancybox-buttons.js"></script>
-  <script src="scripts/jquery.fancybox-thumbs.js"></script>    
-  <script src="scripts/jquery.mousewheel-3.0.6.pack.js"></script>
-  <script type="text/javascript" src="scripts/swfobject.js"></script>
-  <!--[if lt IE 9]>
-      <script type="text/javascript" src="scripts/html5.js"></script>
-        <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
-  <![endif]-->
-  <!--[if lt IE 7]>
-  <div style=' clear: both; text-align:center; position: relative;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://storage.ie6countdown.com/assets/100./images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-   </a>
-  </div>
-  <![endif]-->
-  <script type="text/javascript">if($(window).width()>1024){document.write("<"+"script src='scripts/jquery.parallax.js'></"+"script>");document.write("<"+"script  src='scripts/jquery.parallax-1.1.js'></"+"script>");} </script><script src="scripts/jquery.parallax.js"></script><script src="scripts/jquery.parallax-1.1.js"></script>
-  <script>
-  var ua=navigator.userAgent.toLocaleLowerCase(),
-   regV = /ipod|ipad|iphone/gi,
-   result = ua.match(regV),
-   userScale="";
-  if(!result){
-   userScale=",user-scalable=0"
-  }
-  //document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0'+userScale+'">')
-  </script>
-<!--   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"> -->
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('.flexslider').flexslider();
-    });
-  </script>    
-  <script>
-  ! function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (!d.getElementById(id)) {
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "//platform.twitter.com/widgets.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }
-  }(document, "script", "twitter-wjs");
-  </script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-    $(".fancybox").fancybox();        
-    $(".various").fancybox({
-        maxWidth  : 800,
-        maxHeight : 600,
-        fitToView : false,
-        width   : '70%',
-        height    : '70%',
-        autoSize  : false,
-        closeClick  : false,
-        openEffect  : 'elastic',
-        closeEffect : 'none'
-      }); 
-            
-    });
-  </script>
-  <script type="text/javascript">
-    $('#nav a ').click(function() {
-      $(this).addClass('active');
-    });
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Taipei Design City</title>
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<!-- <link rel="stylesheet" href="http://inthe7heaven.com/sense/css/fancybox/jquery.fancybox-buttons.css">
+		<link rel="stylesheet" href="http://inthe7heaven.com/sense/css/fancybox/jquery.fancybox-thumbs.css">
+		<link rel="stylesheet" href="http://inthe7heaven.com/sense/css/fancybox/jquery.fancybox.css"> -->
+		<link rel="icon" href="http://inthe7heaven.com/sense./images/fav_icon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="http://inthe7heaven.com/sense./images/fav_icon.ico" type="image/x-icon">
+		<script id="twitter-wjs" src="scripts/widgets.js"></script>
+		<script type="text/javascript" src="scripts/jquery-1.7.min.js"></script>
+		<!--<script type="text/javascript" src="scripts/jquery.queryloader.js"></script>-->
+		<script type="text/javascript" src="scripts/jquery.scrollTo-1.4.3.js"></script>
+		<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="scripts/jquery.nav.js"></script>
+		<script type="text/javascript" src="scripts/jquery.scrollorama.js"></script>
+		<script type="text/javascript" src="scripts/jquery.localscroll.js"></script>
+		<script type="text/javascript" src="scripts/jquery.equalheights.js"></script>
+		<script type="text/javascript" src="scripts/forms.js"></script>
+		<script type="text/javascript" src="scripts/jquery.flexslider-min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.elastislide.js"></script>
+		<script type="text/javascript" src="scripts/script.js"></script>
+		<script type="text/javascript" src="scripts/jquery.backgroundPosition.js"></script>
+		<script type="text/javascript" src="scripts/jquery.tweet.js"></script>
+		<script type="text/javascript" src="scripts/TweenMax.js"></script>
+		<!-- FancyBox -->
+		<script src="scripts/jquery.fancybox.js"></script>
+		<script src="scripts/jquery.fancybox-buttons.js"></script>
+		<script src="scripts/jquery.fancybox-thumbs.js"></script>
+		<script src="scripts/jquery.mousewheel-3.0.6.pack.js"></script>
+		<script type="text/javascript" src="scripts/swfobject.js"></script>
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="scripts/html5.js"></script>
+		<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+		<![endif]-->
+		<!--[if lt IE 7]>
+		<div style=' clear: both; text-align:center; position: relative;'>
+		<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+		<img src="http://storage.ie6countdown.com/assets/100./images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+		</a>
+		</div>
+		<![endif]-->
+		<script type="text/javascript">
+			if ($(window).width() > 1024) {
+				document.write("<" + "script src='scripts/jquery.parallax.js'></" + "script>");
+				document.write("<" + "script  src='scripts/jquery.parallax-1.1.js'></" + "script>");
+			}
+		</script><script src="scripts/jquery.parallax.js"></script><script src="scripts/jquery.parallax-1.1.js"></script>
+		<script>
+			var ua = navigator.userAgent.toLocaleLowerCase(), regV = /ipod|ipad|iphone/gi, result = ua.match(regV), userScale = "";
+			if (!result) {
+				userScale = ",user-scalable=0"
+			}
+			//document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0'+userScale+'">')
+		</script>
+		<!--   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"> -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.flexslider').flexslider();
+			});
+		</script>
+		<script>
+			! function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (!d.getElementById(id)) {
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//platform.twitter.com/widgets.js";
+					fjs.parentNode.insertBefore(js, fjs);
+				}
+			}(document, "script", "twitter-wjs");
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".fancybox").fancybox();
+				$(".various").fancybox({
+					maxWidth : 800,
+					maxHeight : 600,
+					fitToView : false,
+					width : '70%',
+					height : '70%',
+					autoSize : false,
+					closeClick : false,
+					openEffect : 'elastic',
+					closeEffect : 'none'
+				});
 
-    jQuery(document).ready(function($) {
+			});
+		</script>
+		<script type="text/javascript">
+			$('#nav a ').click(function() {
+				$(this).addClass('active');
+			});
 
-      $("#menu-icon").on("click", function() {
-        $("#box-nav").slideToggle();
-        $(this).toggleClass("active");
-      });
-    });    
-  </script>
-  <script type="text/javascript">
-  $(document).ready(function() {
-    $('#nav').onePageNav();
-    $('#next_btn').localScroll();
-    $('#logo').localScroll();
-    $('#home_btn').localScroll();
-    $('#button_2').localScroll();
+			jQuery(document).ready(function($) {
 
-    $x = $(window).width();
-    if ($x <= 1024) {
-      $("#main-content").css({
-        position: 'relative'
-      });
-      $("#home,#about,#portfolio,#services,#contact,# 6.5").css({
-        backgroundAttachment: 'scroll'
-      });
-    }
-    if ($x <= 480) {
-      $("#nav a").on("click", function() {
-        $("#box-nav").slideToggle();
-      });
-    }
-    if ($x > 1024) {
-      $("#main-content").css({
-        position: 'fixed'
-      });
-      $('#home').parallax("50%", 0, 0.1, true);
-      $('#about').parallax("50%", 2500, 0.1, true);
-      $('#portfolio').parallax("50%", 3800, 0.1, true);
-      $('#services').parallax("50%", 5200, 0.1, true);
-      $('#contact').parallax("50%", 6400, 0.1, true);
-      $('#world').parallax("50%", 7600, 0.1, true);
-    }
-  })
-  </script>
-</head>
-  <body>
+				$("#menu-icon").on("click", function() {
+					$("#box-nav").slideToggle();
+					$(this).toggleClass("active");
+				});
+			});
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#nav').onePageNav();
+				$('#next_btn').localScroll();
+				$('#logo').localScroll();
+				$('#home_btn').localScroll();
+				$('#button_2').localScroll();
 
-  <div id="wrapper">
-    <div id="main-content"> 
-    <!--==============================header================================-->
-    <header>
-      <div id="home_btn">
-        <a  href="#home" title="Lets begin" class="logo"></a>
-      </div>
-      <nav>
+				$x = $(window).width();
+				if ($x <= 1024) {
+					$("#main-content").css({
+						position : 'relative'
+					});
+					$("#home,#about,#portfolio,#services,#contact,# 6.5").css({
+						backgroundAttachment : 'scroll'
+					});
+				}
+				if ($x <= 480) {
+					$("#nav a").on("click", function() {
+						$("#box-nav").slideToggle();
+					});
+				}
+				if ($x > 1024) {
+					$("#main-content").css({
+						position : 'fixed'
+					});
+					$('#home').parallax("50%", 0, 0.1, true);
+					$('#about').parallax("50%", 2500, 0.1, true);
+					$('#portfolio').parallax("50%", 3800, 0.1, true);
+					$('#services').parallax("50%", 5200, 0.1, true);
+					$('#contact').parallax("50%", 6400, 0.1, true);
+					$('#world').parallax("50%", 7600, 0.1, true);
+				}
+			})
+		</script>
+		<style>
+			.section_social_wrapper {
+				/*display: inline-block;*/
+				display: -webkit-box;
+				display: -moz-box;
+				display: box;
+				-webkit-flex-direction: row;
+				-webkit-box-orient: horizontal;
+				-moz-box-orient: horizontal;
+				box-orient: horizontal;
+				/**
+				 *
+				 */
+				width: 100%;
+				clear: both;
+				float: left;
+			}
+			.section_social_wrapper > div:nth-child(1) {
+				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+				-moz-box-sizing: border-box; /* Firefox, other Gecko */
+				box-sizing: border-box; /* Opera/IE 8+ */
+				/**
+				 *
+				 */
+				-webkit-box-flex: 0;
+				-moz-box-flex: 0;
+				box-flex: 0;
+				width: 30%;
+				min-width: 30%;
+				text-align: left;
+				/**
+				 *
+				 */
+				/*background: green;*/
+				/**
+				 *
+				 */
+				float: none;
+				margin: 0;
+			}
+			.section_social_wrapper > div:nth-child(2) {
+				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+				-moz-box-sizing: border-box; /* Firefox, other Gecko */
+				box-sizing: border-box; /* Opera/IE 8+ */
+				/**
+				 *
+				 */
+				-webkit-box-flex: 1;
+				-moz-box-flex: 1;
+				box-flex: 1;
+				text-align: center;
+				/**
+				 *
+				 */
+				/*background: orange;*/
+				/**
+				 *
+				 */
+				float: none;
+				margin: 0;
+				/**
+				 *
+				 */
+				width: 100%;
+				height: 100%;
+			}
+			.social_map {
+				/**
+				 *
+				 */
+				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+				-moz-box-sizing: border-box; /* Firefox, other Gecko */
+				box-sizing: border-box; /* Opera/IE 8+ */
+				/**
+				 *
+				 */
+				display: inline-block;
+				/**
+				 *
+				 */
+				position: relative;
+				width: 100%;
+				height: 100%;
+				padding: 20px 0px 0px 0px;
+			}
+			.social_map .fb {
+				position: absolute;
+				top: 4%;
+				left: 32%;
+			}
+			.social_map .pinterest {
+				position: absolute;
+				top: 73%;
+				left: 4%;
+			}
+			.social_map .youtube {
+				position: absolute;
+				top: 86%;
+				left: 45%;
+			}
+		</style>
+	</head>
+	<body>
 
-        <ul id="nav">
-          <li><a class="home nav-button" href="#home" title="Next Section" style="height:1px;box-shadow:0px;width:1px"></a></li>
-          <li><a class="about nav-button" href="#about" title="Next Section" style="background: #b6be2b">不斷提昇的城市</a></li>
-          <li><a class="portfolio nav-button" href="#portfolio" title="Next Section" style="background: #F0D300;">走過的路</a></li>
-          <li><a class="services nav-button" href="#services" title="Next Section" style="background: #65BFA1;">社群動起來</a></li>
-          <li><a class="contact nav-button" href="#contact" title="Next Section" style="background: #A4002C;">熱血正燃燒</a></li>
-          <li><a class="world nav-button" href="#world" title="Next Section" style="background: #E94820;">被世界看見</a></li>
-        </ul>
-      </nav>
-    </header>
-  <script>
-  $(document).ready(function () {
-      
-      // $("body").queryLoader2({
-      //     barColor: "#e7ca01",
-      //     backgroundColor: "#fff",
-      //     percentage: true,
-      //     barHeight: 1,
-      //     completeAnimation: "fade",
-      //     minimumTime: 100
-      // });
-    //  $('.gb').animate({"-webkit-transform": "rotate(-180deg)","-moz-transform": "rotate(-180deg)"},300);
-      var wHeight1 = $(window).height();
-      var width1 = $(window).width();
-      if(width1 <=1200){
-        $('p').css({'font-size':'16px','line-height':'20px'});
-      }
-      console.log(wHeight1);
-      // if(wHeight1 >658){
-      //   $('.MRT').css('height',wHeight1-700+0)
-      // //  $('.w2').css('top','40%')
-      // }
-      // else{
-      //    $('.MRT').css('height',130)
-      // //   $('.w2').css('top','37%')
-      // }
-      $('header').css({'top':(wHeight1 - 293)/2});
-      var yh =(wHeight1/2)-150;
-      TweenMax.to($('#nav') , 3, {display:'block',alpha:1});
-      TweenMax.to($('.hi_logo') , 3, {top:yh,alpha:1});
-  });
-  </script>
-    <!--==============================home================================-->
-    <section id="home" class="slide">
-      <article class="home box-content fct_0">
-        <div id="next_btn"><a  href="#about" title="Lets begin" class="portfolio_btn z3"></a></div>
-        <div id="home_img">
-          <img src="./images/index_logo.png" class="hi_logo"/>
-          <figure class="home-img1 z1"></figure>
-          <figure class="home-img2 z1"></figure>
-          <figure class="home-img3 z1"></figure>
-          <figure class="home-img4 z1"></figure>
-          <figure class="home-img5 z1"></figure>
-          <figure class="home-img6 z1"></figure>
-          <figure class="home-img7 z1"></figure>
-          <figure class="home-img8 z1"></figure>
-        </div>
-      </article>
-    </section>
-    <!--#home end--> 
-    <!--==============================about================================-->
-    <section id="about" class="slide">
-      <img src="./images/title1.png" class="title1"/>
-      <article class="about box-content fct_1">
-        <div class="cc1">
-<!--         <div class="box-about1 st1_content"> -->
-          <div class="ct_1">
-            <h5 style="color:#444;font-size:25px">臺北，不斷提昇的城市</h5>
-            <p class="fp">"隨著社會意識抬頭，設計不只是創新，更重要的是解決生活中各式各樣的問題…”</p>
-            <p>在社會設計的氛圍下，臺北市「2016 WDC Taipei」政策將落實「以人為本的設 計」（Design is People）理念，一方面實踐「社會設計」（Social Design）的時代發展潮流，另一方面以「設計是現代公民應有的生活素養」作為推廣目標， 讓市民廣泛的認識設計，感受設計、享受設計。
-            <p>Adaptive City的核心理念是，城市治理必須勇於創新與追求卓越。面對發展上的種種挑戰，唯有不斷求新求變，運用具有前瞻性的創新思維與作法，城市才能為市民帶來更美好的生活。我們透過多元社群、數位行動工具、實體的能量引爆，動員線上到線下大社群，凝聚了眾人的智慧和參與。</p>
-            <p>Adaptive City是當代城市發展的新典範，是臺北致力於推動實踐的城市願景，也是臺北的故事。我們期待，當設計能量從一個一個的城市角落開始發聲，經過大家的參與後逐漸累積成「設計實現生活願景」的全民意識，我們將擁有更多新想法和力量，將問題化為城市未來的新契機。</p>
-          </div>
-        </div>
-<!--         </div> -->
-        <!-- <div class="box-about2">
-          <h3  id="about2-h3">Our Philosophy</h3>
-          <p class="txt-1"> Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet. </p>
-          <p>Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia </p>
-        </div> -->
-        <!-- <div class="box-about3">
-          <h3 id="about3-h3">Meet Our Team</h3>
-          <div class="wrapper">
-            <div class="box-1">
-                <figure><img src="images/img-photo-default.png" alt="" /></figure>
-                <div class="name1"><a href="#">John Barton</a><span>Creative Director</span></div>
-                <blockquote class="quote-2"> “Mauris fermentum dictum magna. Sed laoreet aliquam leo ut tellus.” </blockquote>
-            </div>
-            <div class="box-1">
-                <figure><img src="images/img-photo-default.png" alt="" /></figure>
-                <div class="name1"><a href="#">Camala Haddon</a><span>Project Manager</span></div>
-                <blockquote class="quote-2"> “Dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna aliquam erat volutpat.“ </blockquote>
-            </div>
-            <div class="box-1">
-                <figure><img src="images/img-photo-default.png" alt="" /></figure>
-                <div class="name1"><a href="#">Patrick Pool</a><span>Designer</span></div>
-                <blockquote class="quote-2"> “Duis ac turpis. Integer rutrum ante eu lacus.Vestibulum libero.” </blockquote>
-            </div>
-            <div class="box-1">
-                <figure><img src="images/img-photo-default.png" alt="" /></figure>
-                <div class="name1"><a href="#">Alan Smith</a><span>Developer</span></div>
-                <blockquote class="quote-2"> “Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante.” </blockquote>
-            </div>
-            <div class="box-1 last">
-                <figure><img src="images/img-photo-default.png" alt="" /></figure>
-                <div class="name1"><a href="#">Mark Johnson</a><span>Leading Programmer</span></div>
-                <blockquote class="quote-2"> “Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue. Nam elit agna,endrerit sit.” </blockquote>
-            </div>
-          </div>
-        </div> -->
-<!-- 
-        <img src="./images/bg1.png" class="cld1"/>
-        <img src="./images/bg1.png" class="cld1"/>
-        <img src="./images/bg1.png" class="cld1"/>
-        <img src="./images/bg1.png" class="cld1"/>-->
-      </article> 
-        <img src="./images/city3.png" class="city3c"/>
-        <img src="./images/city2.png" class="city2c"/>
-        <img src="./images/city1.png" class="city1c"/>
-        <img src="./images/city3c.png" class="city3cc"/>
-        <img src="./images/city2c.png" class="city2cc"/>
-        <img src="./images/city1c.png" class="city1cc"/>
-        <img src="./images/airplane.png" class="ap"/>
-<!--         <img src="./images/city3c.png" class="city3c"/>
-        <img src="./images/city2c.png" class="city2c"/>
-        <img src="./images/city1c.png" class="city1c"/> -->
-    </section>
-    <!--#about end--> 
-    <!--==============================portfolio================================-->
-    <section id="portfolio" class="slide">
-      
-      <img src="./images/title2.png" class="title2"/>
-      <article class="box-content fct_2">
-        <div class="cc2">
-        <div class="ct_2">
-          <div class="ct_2_fr">
-            <p>和城市一起走過的路，醞釀強大的設計力量</p>
-            <p>因為2016臺北市申請世界設計之都的幸福願景，我們 不只向前走，也開始回頭細數、深刻探究臺北的過去， 回味人與環境互動下，獨特的光陰故事。</p>
-            <p>漸漸的我們長大，城市也隨著我們悄悄蛻變、不斷提昇 、不斷進化。我們體會，生活的美好總是出現在不經意 之處，平日漫步的臺北街頭有了更有趣的風景。城市的 角落，正醞釀著強大的設計力量。</p>
-          </div>
-        </div>
+		<div id="wrapper">
+			<div id="main-content">
+				<!--==============================header================================-->
+				<header>
+					<div id="home_btn">
+						<a  href="#home" title="Lets begin" class="logo"></a>
+					</div>
+					<nav>
 
-        </div>
+						<ul id="nav">
+							<li>
+								<a class="home nav-button" href="#home" title="Next Section" style="height:1px;box-shadow:0px;width:1px"></a>
+							</li>
+							<li>
+								<a class="about nav-button" href="#about" title="Next Section" style="background: #b6be2b">不斷提昇的城市</a>
+							</li>
+							<li>
+								<a class="portfolio nav-button" href="#portfolio" title="Next Section" style="background: #F0D300;">走過的路</a>
+							</li>
+							<li>
+								<a class="services nav-button" href="#services" title="Next Section" style="background: #65BFA1;">社群動起來</a>
+							</li>
+							<li>
+								<a class="contact nav-button" href="#contact" title="Next Section" style="background: #A4002C;">熱血正燃燒</a>
+							</li>
+							<li>
+								<a class="world nav-button" href="#world" title="Next Section" style="background: #E94820;">被世界看見</a>
+							</li>
+						</ul>
+					</nav>
+				</header>
+				<script>
+					$(document).ready(function() {
 
-       <!--  <img src="./images/bike.gif" class="bicycle" style=""/> -->
-       
-        <!-- <img src="./images/oldTrain.png" class="MRT" style=""/> -->
-      </article>
-             <div class="w2">
-        <img src="./images/r.jpg" class="a1"/>
-        <img src="./images/x.jpg" class="a2"/>
-        <img src="./images/cx.jpg" class="a3"/>
-        <img src="./images/f1.jpg" class="a4"/>
-        <img src="./images/c1.jpg" class="a5"/>
-        <img src="./images/b.jpg" class="a6"/>
-       </div>
-       <img src="./images/bike.gif" class="bike" style=""/>
-       <img src="./images/oldTrain.png" class="train" style=""/>
-       <img src="./images/newTrain.png" class="MRT" style=""/>
+						// $("body").queryLoader2({
+						//     barColor: "#e7ca01",
+						//     backgroundColor: "#fff",
+						//     percentage: true,
+						//     barHeight: 1,
+						//     completeAnimation: "fade",
+						//     minimumTime: 100
+						// });
+						//  $('.gb').animate({"-webkit-transform": "rotate(-180deg)","-moz-transform": "rotate(-180deg)"},300);
+						var wHeight1 = $(window).height();
+						var width1 = $(window).width();
+						if (width1 <= 1200) {
+							$('p').css({
+								'font-size' : '16px',
+								'line-height' : '20px'
+							});
+						}
+						console.log(wHeight1);
+						// if(wHeight1 >658){
+						//   $('.MRT').css('height',wHeight1-700+0)
+						// //  $('.w2').css('top','40%')
+						// }
+						// else{
+						//    $('.MRT').css('height',130)
+						// //   $('.w2').css('top','37%')
+						// }
+						$('header').css({
+							'top' : (wHeight1 - 293) / 2
+						});
+						var yh = (wHeight1 / 2) - 150;
+						TweenMax.to($('#nav'), 3, {
+							display : 'block',
+							alpha : 1
+						});
+						TweenMax.to($('.hi_logo'), 3, {
+							top : yh,
+							alpha : 1
+						});
+					});
+				</script>
+				<!--==============================home================================-->
+				<section id="home" class="slide">
+					<article class="home box-content fct_0">
+						<div id="next_btn">
+							<a  href="#about" title="Lets begin" class="portfolio_btn z3"></a>
+						</div>
+						<div id="home_img">
+							<img src="./images/index_logo.png" class="hi_logo"/>
+							<figure class="home-img1 z1"></figure>
+							<figure class="home-img2 z1"></figure>
+							<figure class="home-img3 z1"></figure>
+							<figure class="home-img4 z1"></figure>
+							<figure class="home-img5 z1"></figure>
+							<figure class="home-img6 z1"></figure>
+							<figure class="home-img7 z1"></figure>
+							<figure class="home-img8 z1"></figure>
+						</div>
+					</article>
+				</section>
+				<!--#home end-->
+				<!--==============================about================================-->
+				<section id="about" class="slide">
+					<img src="./images/title1.png" class="title1"/>
+					<article class="about box-content fct_1">
+						<div class="cc1">
+							<!--         <div class="box-about1 st1_content"> -->
+							<div class="ct_1">
+								<h5 style="color:#444;font-size:25px">臺北，不斷提昇的城市</h5>
+								<p class="fp">
+									"隨著社會意識抬頭，設計不只是創新，更重要的是解決生活中各式各樣的問題…”
+								</p>
+								<p>
+									在社會設計的氛圍下，臺北市「2016 WDC Taipei」政策將落實「以人為本的設 計」（Design is People）理念，一方面實踐「社會設計」（Social Design）的時代發展潮流，另一方面以「設計是現代公民應有的生活素養」作為推廣目標， 讓市民廣泛的認識設計，感受設計、享受設計。
+								<p>
+									Adaptive City的核心理念是，城市治理必須勇於創新與追求卓越。面對發展上的種種挑戰，唯有不斷求新求變，運用具有前瞻性的創新思維與作法，城市才能為市民帶來更美好的生活。我們透過多元社群、數位行動工具、實體的能量引爆，動員線上到線下大社群，凝聚了眾人的智慧和參與。
+								</p>
+								<p>
+									Adaptive City是當代城市發展的新典範，是臺北致力於推動實踐的城市願景，也是臺北的故事。我們期待，當設計能量從一個一個的城市角落開始發聲，經過大家的參與後逐漸累積成「設計實現生活願景」的全民意識，我們將擁有更多新想法和力量，將問題化為城市未來的新契機。
+								</p>
+							</div>
+						</div>
+						<!--         </div> -->
+						<!-- <div class="box-about2">
+						<h3  id="about2-h3">Our Philosophy</h3>
+						<p class="txt-1"> Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet. </p>
+						<p>Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia </p>
+						</div> -->
+						<!-- <div class="box-about3">
+						<h3 id="about3-h3">Meet Our Team</h3>
+						<div class="wrapper">
+						<div class="box-1">
+						<figure><img src="images/img-photo-default.png" alt="" /></figure>
+						<div class="name1"><a href="#">John Barton</a><span>Creative Director</span></div>
+						<blockquote class="quote-2"> “Mauris fermentum dictum magna. Sed laoreet aliquam leo ut tellus.” </blockquote>
+						</div>
+						<div class="box-1">
+						<figure><img src="images/img-photo-default.png" alt="" /></figure>
+						<div class="name1"><a href="#">Camala Haddon</a><span>Project Manager</span></div>
+						<blockquote class="quote-2"> “Dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna aliquam erat volutpat.“ </blockquote>
+						</div>
+						<div class="box-1">
+						<figure><img src="images/img-photo-default.png" alt="" /></figure>
+						<div class="name1"><a href="#">Patrick Pool</a><span>Designer</span></div>
+						<blockquote class="quote-2"> “Duis ac turpis. Integer rutrum ante eu lacus.Vestibulum libero.” </blockquote>
+						</div>
+						<div class="box-1">
+						<figure><img src="images/img-photo-default.png" alt="" /></figure>
+						<div class="name1"><a href="#">Alan Smith</a><span>Developer</span></div>
+						<blockquote class="quote-2"> “Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante.” </blockquote>
+						</div>
+						<div class="box-1 last">
+						<figure><img src="images/img-photo-default.png" alt="" /></figure>
+						<div class="name1"><a href="#">Mark Johnson</a><span>Leading Programmer</span></div>
+						<blockquote class="quote-2"> “Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue. Nam elit agna,endrerit sit.” </blockquote>
+						</div>
+						</div>
+						</div> -->
+						<!--
+						<img src="./images/bg1.png" class="cld1"/>
+						<img src="./images/bg1.png" class="cld1"/>
+						<img src="./images/bg1.png" class="cld1"/>
+						<img src="./images/bg1.png" class="cld1"/>-->
+					</article>
+					<img src="./images/city3.png" class="city3c"/>
+					<img src="./images/city2.png" class="city2c"/>
+					<img src="./images/city1.png" class="city1c"/>
+					<img src="./images/city3c.png" class="city3cc"/>
+					<img src="./images/city2c.png" class="city2cc"/>
+					<img src="./images/city1c.png" class="city1cc"/>
+					<img src="./images/airplane.png" class="ap"/>
+					<!--         <img src="./images/city3c.png" class="city3c"/>
+					<img src="./images/city2c.png" class="city2c"/>
+					<img src="./images/city1c.png" class="city1c"/> -->
+				</section>
+				<!--#about end-->
+				<!--==============================portfolio================================-->
+				<section id="portfolio" class="slide">
 
-        
-    </section>
-    <!--#portfolio end--> 
-    <!--==============================services================================-->
-    <section id="services" class="slide">
-      <img src="./images/title3.png" class="title3"/>
-      <article class="services box-content fct_3">
-        <div class="cc3">
-          <div class="ct_3">
-            <p>因為設計之都，我們一起看見了臺北的設計靈魂。</p>
+					<img src="./images/title2.png" class="title2"/>
+					<article class="box-content fct_2">
+						<div class="cc2">
+							<div class="ct_2">
+								<div class="ct_2_fr">
+									<p>
+										和城市一起走過的路，醞釀強大的設計力量
+									</p>
+									<p>
+										因為2016臺北市申請世界設計之都的幸福願景，我們 不只向前走，也開始回頭細數、深刻探究臺北的過去， 回味人與環境互動下，獨特的光陰故事。
+									</p>
+									<p>
+										漸漸的我們長大，城市也隨著我們悄悄蛻變、不斷提昇 、不斷進化。我們體會，生活的美好總是出現在不經意 之處，平日漫步的臺北街頭有了更有趣的風景。城市的 角落，正醞釀著強大的設計力量。
+									</p>
+								</div>
+							</div>
 
-            <p>周遭流動的風景不再是理所當然，我們用更好奇的眼光觀察、記錄這個世代 日常現象彷彿也有了新的意義，我們更熱切的與其他人分享。向世界展現臺北市對 於申辦世界設計之都的熱情。</p>
-          </div>
+						</div>
 
-         
-          <img src="./images/logos_Animation.gif" class="logos"/>
-          <img src="./images/fb.png" class="fb" href="www.facebook.com"/>
-          <img src="./images/youtube.png" class="youtube" href="www.youtube.com.tw"/>
-          <img src="./images/pinterest.png" class="pinterest" href="www.pinterest.com"/>
-        </div>
-      </article>
-    </section>
-    <!--#services end--> 
-    <!--==============================contact================================-->
-    <section id="contact" class="slide">
-      <img src="./images/title4.png" class="title4"/>
-      <article class="box-content fct_4">
-        <div class="cc4">
-        <div class="ct_4">
-        <p>我們不斷凝聚有熱血、有想法，願意站起來，動手為這個城市做一些改變的人運用網路與科技、融合人文的關懷與同理心，具體解決居民的食衣住行問題</p>
+						<!--  <img src="./images/bike.gif" class="bicycle" style=""/> -->
 
-        <p>民間設計能量正熱血實踐一個個具體案例，創造更多幸福，讓這座城市變得更好。</p>
-        </div>
-        
-        <img src="./images/textBK4.png" class="textBK4"/>
-        <img src="./images/taipeippl.png" class="tppl"/>
-        </div>
+						<!-- <img src="./images/oldTrain.png" class="MRT" style=""/> -->
+					</article>
+					<div class="w2">
+						<img src="./images/r.jpg" class="a1"/>
+						<img src="./images/x.jpg" class="a2"/>
+						<img src="./images/cx.jpg" class="a3"/>
+						<img src="./images/f1.jpg" class="a4"/>
+						<img src="./images/c1.jpg" class="a5"/>
+						<img src="./images/b.jpg" class="a6"/>
+					</div>
+					<img src="./images/bike.gif" class="bike" style=""/>
+					<img src="./images/oldTrain.png" class="train" style=""/>
+					<img src="./images/newTrain.png" class="MRT" style=""/>
 
-      </article>
-    </section>
-    <!--#contact end--> 
-      <div class="final_logo">
-        <img src="./images/index_logo.png" />
-      </div>
-      <section id="world" class="slide">
-        <img src="./images/title5.png" class="title5"/>
-        <article class="box-content fct_5">
-          <div class="cc5">
-            <div class="ct_5">
-            <p>這一次，我們玩數位、拼熱血，串連線上臺北前所未有的設計能量由全世界第一個會走動的小綠人發聲，宣示「奔跑吧！臺北設計之光」</p>
-            <p>We Are Ready! <br/>
-            以實際行動支持臺北市奔向2016世界設計之都</p>
-            <p>每一座WDC都有自己的故事，臺北的故事內容正在如火如荼的開展中。在2016年，我們將會看到，臺北市精彩的銳變。</p>
-            </div>
-            <div class="allpic">
-              <img src="./images/photos.jpg" style="width:100%"/>
-            </div>
+				</section>
+				<!--#portfolio end-->
+				<!--==============================services================================-->
+				<section id="services" class="slide">
+					<img src="./images/title3.png" class="title3"/>
+					<article class="services box-content fct_3">
+						<div class="cc3 section_social_wrapper">
+							<div class="ct_3">
+								<p>
+									因為設計之都，我們一起看見了臺北的設計靈魂。
+								</p>
 
-            <div class="gr_fr">
-              <img src="./images/greenman.gif" id="greenman"/>
-            </div>
-            <img src="./images/global.png" class="gb" id="gb"/>
-          </div>
-        </article>
+								<p>
+									周遭流動的風景不再是理所當然，我們用更好奇的眼光觀察、記錄這個世代 日常現象彷彿也有了新的意義，我們更熱切的與其他人分享。向世界展現臺北市對 於申辦世界設計之都的熱情。
+								</p>
+							</div>
 
-      <!-- <div class="final_log">
-        <img src="/img/index_logo.png"/>
-      </div> -->
-      </section>
-      
-    </div>
-  </div>
+							<div>
+								<div class="social_map">
+									<img src="./images/logos_Animation.gif" class="logos"/>
+									<img src="./images/fb.png" class="fb" href="www.facebook.com"/>
+									<img src="./images/youtube.png" class="youtube" href="www.youtube.com.tw"/>
+									<img src="./images/pinterest.png" class="pinterest" href="www.pinterest.com"/>
+								</div>
+							</div>
+						</div>
+					</article>
+				</section>
+				<!--#services end-->
+				<!--==============================contact================================-->
+				<section id="contact" class="slide">
+					<img src="./images/title4.png" class="title4"/>
+					<article class="box-content fct_4">
+						<div class="cc4">
+							<div class="ct_4">
+								<p>
+									我們不斷凝聚有熱血、有想法，願意站起來，動手為這個城市做一些改變的人運用網路與科技、融合人文的關懷與同理心，具體解決居民的食衣住行問題
+								</p>
 
-  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-</body>
+								<p>
+									民間設計能量正熱血實踐一個個具體案例，創造更多幸福，讓這座城市變得更好。
+								</p>
+							</div>
+
+							<img src="./images/textBK4.png" class="textBK4"/>
+							<img src="./images/taipeippl.png" class="tppl"/>
+						</div>
+
+					</article>
+				</section>
+				<!--#contact end-->
+				<div class="final_logo">
+					<img src="./images/index_logo.png" />
+				</div>
+				<section id="world" class="slide">
+					<img src="./images/title5.png" class="title5"/>
+					<article class="box-content fct_5">
+						<div class="cc5">
+							<div class="ct_5">
+								<p>
+									這一次，我們玩數位、拼熱血，串連線上臺北前所未有的設計能量由全世界第一個會走動的小綠人發聲，宣示「奔跑吧！臺北設計之光」
+								</p>
+								<p>
+									We Are Ready!
+									<br/>
+									以實際行動支持臺北市奔向2016世界設計之都
+								</p>
+								<p>
+									每一座WDC都有自己的故事，臺北的故事內容正在如火如荼的開展中。在2016年，我們將會看到，臺北市精彩的銳變。
+								</p>
+							</div>
+							<div class="allpic">
+								<img src="./images/photos.jpg" style="width:100%"/>
+							</div>
+
+							<div class="gr_fr">
+								<img src="./images/greenman.gif" id="greenman"/>
+							</div>
+							<img src="./images/global.png" class="gb" id="gb"/>
+						</div>
+					</article>
+
+					<!-- <div class="final_log">
+					<img src="/img/index_logo.png"/>
+					</div> -->
+				</section>
+
+			</div>
+		</div>
+
+		<script>
+			document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+		</script>
+	</body>
 </html>
