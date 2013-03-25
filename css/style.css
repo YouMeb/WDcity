@@ -827,10 +827,18 @@ cursor: pointer;
 	margin-top: -30px;
 	float: left;
 }
-.tppl{
-	width: 70%;
+/*.tppl{
+	width: 100%;
 	margin-top: -50px;
 	margin-left:15%;
+}*/
+.tppl{
+	position: fixed;
+	z-index: 0;
+	top:0;
+	left: 0;
+	width: 100%;
+	margin-top: -50px;
 }
 
 /*----------------st5---------------------------*/
