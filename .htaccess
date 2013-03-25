@@ -1,0 +1,17 @@
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 4 hours"
+ExpiresByType application/javascript "access plus 1 week"
+ExpiresByType application/x-javascript "access plus 1 week"
+ExpiresByType text/javascript "access plus 1 week"
+ExpiresByType text/css "access plus 1 week"
+ExpiresByType text/html A900
+ExpiresByType text/xml A14400
+ExpiresByType text/plain "access plus 1 week"
+ExpiresByType image/gif "access plus 1 week"
+ExpiresByType image/jpg "access plus 1 week"
+ExpiresByType image/jpeg "access plus 1 week"
+ExpiresByType image/png "access plus 1 week"
+ExpiresByType image/bmp "access plus 1 week"
+ExpiresByType application/x-shockwave-flash A3600
+</IfModule>
