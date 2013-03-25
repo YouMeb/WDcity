@@ -746,6 +746,7 @@ h3 {
 }
 .fct_1{
 	min-height: 300px;
+	z-index: 999;
 }
 .ap{
 	width: 50%;
