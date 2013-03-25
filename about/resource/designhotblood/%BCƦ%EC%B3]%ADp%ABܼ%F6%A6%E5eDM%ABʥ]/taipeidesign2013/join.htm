@@ -1,0 +1,551 @@
+<Head>
+<title>Questionnaire</title>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<meta HTTP-EQUIV="Expires" CONTENT="Fri, 10 Jul 1998 15:00:00 +0800">
+<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+<!-- WebMAX_Naire_System_Script_Start ####Don't Move or Modify this information //-->
+<style type="text/css">
+<!--
+    .wmax_NaireFont {
+	font-family: "微軟正黑體", Arial;
+	font-size: 15px;
+	color: #242424;
+	line-height: 22px
+}
+    .wmax_NaireFont_Bold {
+	font-family: "微軟正黑體", Arial;
+	font-size: 15px;
+	line-height: normal;
+	color: #242424;
+	letter-spacing: 1px;
+	font-weight: normal
+}
+    .wmax_InputBox  {
+	font-family: "微軟正黑體", Arial;
+	font-size: 12pt;
+	color: #333;
+	background-color: #E0F3FC;
+	border: 1px solid #FFF;
+}
+    .wmax_SelectBox {
+	font-family: "新細明體";
+	font-size: 10pt;
+	color: #333;
+	background-color: #E0F3FC;
+	border: 1px solid #DAFEA5;
+}
+    .wmax_buttonBox {
+	font-family: "微軟正黑體", Arial;
+	font-size: 18px;
+	color: #FFF;
+	background-color: #0A8AE9;
+	cursor:hand;
+	border: 1px solid #DAFEA5;
+	height: 40px;
+	width: 110px;
+	font-weight: bold;
+}
+    .wmax_Naire_Group{
+	font-family: "新細明體", "Times New Roman";
+	font-size: 12px;
+	color: #333;
+	background-color: #DADAFA;
+	line-height: normal;
+	letter-spacing: 1px;
+	font-weight: bold
+}
+	.t {
+	font-family: "微軟正黑體", Arial;
+	font-size: 15px;
+	color: #666;
+	line-height: 18px;
+	text-align: center;
+}
+.li-T2 a{
+	color: #67AB0C;
+	text-decoration: none;
+	font-family: "新細明體";
+	font-size: 10pt;
+	line-height: 16pt;
+	font-weight: normal;
+}
+.li-T2 a:hover{
+	line-height: 16pt;
+	font-family: "新細明體";
+	font-size: 10pt;
+	font-weight: normal;
+	color: #36C;
+}
+
+
+body {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-image: url(images/join-B.gif);
+}
+-->
+</style>
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+descArray  = new Array;
+    ctrlArray  = new Array;
+    rulerArray = new Array;
+    pageArray  = new Array;
+    ctrlArray[0]  = 'naire_9662_1';
+    rulerArray[0] = 'Check_Empty';
+    descArray[0]  = '姓名';
+    pageArray[0]  = '0';
+    ctrlArray[1]  = 'naire_9662_2';
+    rulerArray[1] = 'Check_Empty';
+    descArray[1]  = '手機號碼';
+    pageArray[1]  = '0';
+    ctrlArray[2]  = 'naire_9662_3';
+    rulerArray[2] = 'Check_EMail';
+    descArray[2]  = '電子郵件';
+    pageArray[2]  = '0';
+    ctrlArray[3]  = 'naire_9662_4';
+    rulerArray[3] = 'Check_Empty';
+    descArray[3]  = '行業別';
+    pageArray[3]  = '0';
+    ctrlArray[4]  = 'naire_9662_5';
+    rulerArray[4] = 'Check_Empty';
+    descArray[4]  = '職務別';
+    pageArray[4]  = '0';
+    ctrlArray[5]  = 'naire_9662_7';
+    rulerArray[5] = 'Check_Empty';
+    descArray[5]  = '我要訂閱《經理人月刊》主辦或協辦的社群資訊';
+    pageArray[5]  = '0';
+    ctrlArray[6]  = 'naire_9662_8';
+    rulerArray[6] = 'Check_Empty';
+    descArray[6]  = '我同意數位時代/經理人/Shopping Design網路服務規範';
+    pageArray[6]  = '0';
+    currPage=0;
+    pageCount=1;
+function ArrayIndexOf(arySource, strValue)
+{
+    var nIndex = -1;
+    for (var i=0; i<arySource.length; i++)
+    {
+        if (arySource[i] == strValue)
+        {
+            nIndex = i;
+            break;
+        }
+    }
+    return (nIndex);
+}
+
+function GetSkipArray(objForm)
+{
+    var aryTmp = new Array();
+    var aryTr = objForm.getElementsByTagName("tr");
+    for ( i in aryTr )
+    {
+        if (typeof(aryTr[i].style) != "undefined" && aryTr[i].style.display == "none")
+        {
+            for (var j=0; j<aryTr[i].cells.length; j++)
+            {
+                for (var k=0; k<aryTr[i].cells[j].childNodes.length; k++)
+                {
+                    var strTmp = aryTr[i].cells[j].childNodes[k].name;
+                    if (strTmp == null || strTmp == "" || strTmp == "item")
+                        continue;
+
+                    if (ArrayIndexOf(aryTmp,strTmp) == -1)
+                        aryTmp[aryTmp.length] = strTmp;
+                }
+            }
+        }
+    }
+
+    return aryTmp;
+}
+
+function CheckForm(objForm)
+{
+    var i, j;
+    var preName = "";
+    _wmx_password="";
+    var arySkip = GetSkipArray(objForm);
+
+    //Clean Hidden Data
+    for (i in arySkip)
+    {
+        var aryElement = document.getElementsByName(arySkip[i]);
+        for (j=0; j<aryElement.length; j++)
+        {
+            switch (aryElement[j].type)
+            {
+            case "text":
+                aryElement[j].value = "";
+                break;
+            case "radio":
+                aryElement[j].checked = false;
+                break;
+            case "checkbox":
+                aryElement[j].checked = false;
+                break;
+            case "select":
+                aryElement[j].options[0].selected = true;
+                break;
+            case "select-one":
+                aryElement[j].options[0].selected = true;
+                break;
+            }
+        }
+    }
+    
+    for (i=0; i < objForm.elements.length; i++)
+    {
+        var obj = objForm.elements[i];
+        if (preName == "" || preName != obj.name)
+        { 
+            // because multiple checkbox, radio have same name            
+            preName = obj.name;
+            var index = FindCtrlIndex(obj.name);
+            if (index >= 0 && ArrayIndexOf(arySkip, preName) == -1)
+            {
+                var func = "result = ";
+                func += rulerArray[index];
+                func += "(obj, ";
+                func += "'" + descArray[index] + "'";
+                func += ");";
+                eval(func);
+                if (result == false)
+                {
+                    return false;
+                }    
+            }    
+        }
+    }    
+    
+    //Second Pass for Date check;
+    for (i=0; i < objForm.elements.length; i++)
+    {
+        var obj = objForm.elements[i];
+        if (preName == "" || preName != obj.name)
+        { 
+            // because multiple checkbox, radio have same name            
+            preName = obj.name;
+            var index = FindCtrlIndex(obj.name);
+            if (index >= 0 && ArrayIndexOf(arySkip, preName) == -1)
+            {
+                var func = "result = ";
+                func += rulerArray[index];
+                func += "(obj, ";
+                func += "'" + descArray[index] + "'";
+                func += ");";
+                eval(func);
+                if (result == false)
+                {
+                    return false;
+                }    
+            }    
+        }
+    }        
+    return true;
+} 
+
+function FindCtrlIndex(name)
+{
+    var i;
+    for (i=0; i < ctrlArray.length; i++)
+    {
+        //if (ctrlArray[i] == name)
+        if (ctrlArray[i] == name && pageArray[i] == currPage)
+        
+            return i;
+    }
+    return -1;
+} 
+function Check_Empty(objCheck, name)
+{
+    var error = false;
+    if (objCheck.type == "checkbox" || objCheck.type == "radio")
+    {
+        if(Check_Empty_Radio(objCheck) == false)
+        {
+            var message = "[";
+            message += name;
+            message += "] - 請選擇其中資訊 !"
+            alert(message);
+            return false;
+        }    
+    }
+    else if(objCheck.type == "select")
+    {
+        if (objCheck.value == "")
+        {
+            var message = "[";
+            message += name;
+            message += "] - 請選擇其中資訊 !"
+            alert(message);
+            return false;
+        }            
+    }
+    else
+    {
+        if (objCheck.value == "")
+        {
+            var message = "[";
+            message += name;
+            message += "] - 不可空白 !"
+            alert(message);
+            return false;
+        }                    
+    }
+    return true;
+}
+
+function Check_Empty_Radio(objCheck)
+{
+    var objForm = objCheck.form;     
+    for (i=0; i < objForm.elements.length; i++)
+    {
+        var obj = objForm.elements[i];
+        if (obj.name == objCheck.name)
+        {
+            if (obj.checked == true)
+                break;
+        }
+    }
+    return (i < objForm.elements.length);
+}
+
+function Check_EMail(objCheck, name)
+{
+    var error = false;
+    var value = objCheck.value;
+    value = value.replace(/^\s+/,"") ;
+    value = value.replace(/\s+$/,"") ;
+    
+    if (value.length <= 2)
+    {
+        error = true;
+    }   
+    else   
+    {   
+        var posA = value.indexOf('@');
+        var posDot = value.lastIndexOf('.');
+        var posLS = value.indexOf('<');
+        var posGT = value.indexOf('>');
+        if (posA < 0 || posDot < 0 || posA > posDot)
+        {
+            error = true;
+        }
+        
+        if(posLS != -1)
+        {
+            if(posLS > posGT ||
+               posGT !=  value.length-1 ||
+               posA < posLS ||
+               posDot < posLS ||
+               posA > posGT ||
+               posDot > posGT )
+            error = true;
+        }
+    }
+    
+    if (error == true)
+    {
+        var message = "[";
+        message += name;
+        message += "] - 不正確的電子郵件信箱(xxx@xxx.xxx) !"
+        alert(message);
+        return false;
+    }
+    return true;
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</SCRIPT>
+<!-- WebMAX_Naire_System_Script_End ####Don't Move or Modify this information //-->
+</head>
+<body onLoad="MM_preloadImages('images/P2_04.gif','images/P2_05.gif','images/P2_06.gif')" >
+<!-- WebMAX_Naire_System_Body_Start ####Don't Move or Modify this information //-->
+  <table width=950 border="0" align=center cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr class="wmax_NaireFont">
+        <td><table width="950" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><img src="images/agenda_01.gif" width="950" height="147" /></td>
+          </tr>
+          <tr>
+            <td><table width="950" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="217"><img src="images/agenda_02.gif" width="217" height="45" /></td>
+                <td width="115"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','images/P2_03.gif',0)"><img src="images/agenda_03.gif" name="Image3" width="115" height="45" border="0" id="Image3" /></a></td>
+                <td width="116"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','images/P2_04.gif',1)"><img src="images/agenda_04.gif" name="Image4" width="116" height="45" border="0" id="Image4" /></a></td>
+                <td width="116"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','images/P2_05.gif',1)"><img src="images/agenda_05.gif" name="Image5" width="116" height="45" border="0" id="Image5" /></a></td>
+                <td width="186"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','images/P2_06.gif',1)"><img src="images/agenda_06.gif" name="Image6" width="186" height="45" border="0" id="Image6" /></a></td>
+                <td width="200"><a href="index.html"><img src="images/agenda_07.gif" width="200" height="45" border="0" /></a></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr class="wmax_NaireFont">
+        <td><img src="images/join-title.gif" width="950" height="79"></td>
+      </tr>
+      <tr class="wmax_NaireFont">
+        <td>
+          <form id=wmax_naire_form1 method=post name=wmax_naire_form1 class="wmax_NaireFont" action=http://wm7.ecrm.com.tw/web_service/SurveyService/Survey_unreg.aspx LANGUAGE=javascript onSubmit="return CheckForm(wmax_naire_form1)">
+            <table width="100%" border=0 cellspacing=0 cellpadding=1>
+            <tr>
+              <td height="400" align="center"> 
+              <table ID="PAGE0" width=100% border=0 cellspacing=0  cellpadding=5>
+              <tbody>
+                <tr ID = "NAIRE_TR_1" >
+                  <td align=right width=36% class=wmax_NaireFont_Bold>* 姓名&nbsp</td>
+                  <td width=64% class=wmax_NaireFont bgcolor="#FFFFFF">
+                    <input type=text  class=wmax_InputBox  name="naire_9662_1" size="48" maxLength="128" value="">
+                  </td>
+                </tr>
+                <tr ID = "NAIRE_TR_2" >
+                  <td align=right width=36% class=wmax_NaireFont_Bold>* 手機號碼&nbsp</td>
+                  <td width=64% class=wmax_NaireFont bgcolor="#FFFFFF">
+                    <input type=text  class=wmax_InputBox  name="naire_9662_2" size="15" maxLength="15" value="">
+                  </td>
+                </tr>
+                <tr ID = "NAIRE_TR_3" >
+                  <td align=right width=36% class=wmax_NaireFont_Bold>* 電子郵件&nbsp</td>
+                  <td width=64% class=wmax_NaireFont bgcolor="#FFFFFF">
+                    <input type=text  class=wmax_InputBox  name="naire_9662_3" size="48" maxLength="128" value="">
+                  </td>
+                </tr>
+                <tr ID = "NAIRE_TR_4" >
+                  <td align=right width=36% class=wmax_NaireFont_Bold>* 行業別&nbsp</td>
+                  <td width=64% class=wmax_NaireFont bgcolor="#FFFFFF">
+                    <select class=wmax_SelectBox name="naire_9662_4" type=select>
+                      <option selected value="">請選擇</option>
+                      <option value="1">金融/保險</option>
+                      <option value="2">房地產</option>
+                      <option value="3">軍公教</option>
+                      <option value="4">教育/研究</option>
+                      <option value="5">進出口貿易</option>
+                      <option value="6">建築/營造</option>
+                      <option value="7">製造/供應商</option>
+                      <option value="8">資訊</option>
+                      <option value="9">服務</option>
+                      <option value="10">醫療</option>
+                      <option value="11">法律相關事業</option>
+                      <option value="12">流通/零售</option>
+                      <option value="13">交通/運輸/旅遊</option>
+                      <option value="14">娛樂/出版</option>
+                      <option value="15">傳播/公共關係/廣告/行銷</option>
+                      <option value="16">藝術</option>
+                      <option value="17">農林漁牧</option>
+                      <option value="18">學生</option>
+                      <option value="19">其他</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr ID = "NAIRE_TR_5" >
+                  <td align=right width=36% class=wmax_NaireFont_Bold>* 職務別&nbsp</td>
+                  <td width=64% class=wmax_NaireFont bgcolor="#FFFFFF">
+                    <input name="naire_9662_5" type=radio value="1" wmx_optionIndex="1" >人力資源  
+                    <input name="naire_9662_5" type=radio value="2" wmx_optionIndex="2" >財會/行政  
+                    <input name="naire_9662_5" type=radio value="3" wmx_optionIndex="3" >公關/活動企畫  
+                    <input name="naire_9662_5" type=radio value="4" wmx_optionIndex="4" >行銷/業務  
+                    <input name="naire_9662_5" type=radio value="5" wmx_optionIndex="5" >設計/美術<br>
+                    <input name="naire_9662_5" type=radio value="6" wmx_optionIndex="6" >工程/技術  
+                    <input name="naire_9662_5" type=radio value="7" wmx_optionIndex="7" >資訊/研發  
+                    <input name="naire_9662_5" type=radio value="8" wmx_optionIndex="8" >專業人員  
+                    <input name="naire_9662_5" type=radio value="9" wmx_optionIndex="9" >其他  
+                  </td>
+                </tr>
+                <tr ID = "NAIRE_TR_6" >
+                  <td align=right width=36% class=wmax_NaireFont_Bold>職務別-其他&nbsp</td>
+                  <td width=64% class=wmax_NaireFont bgcolor="#FFFFFF">
+                    <input type=text  class=wmax_InputBox  name="naire_9662_6" size="32" maxLength="32" value="">
+                  </td>
+                </tr>
+                <tr ID = "NAIRE_TR_7" >
+                  <td align=right width=36% class=wmax_NaireFont_Bold>* 我要訂閱《經理人月刊》<br>
+                    主辦或協辦的社群資訊&nbsp</td>
+                  <td width=64% class=wmax_NaireFont bgcolor="#FFFFFF">
+                    <input name="naire_9662_7" type=radio value="1" wmx_optionIndex="1" >訂閱  
+                    <input name="naire_9662_7" type=radio value="2" wmx_optionIndex="2" >不訂閱  
+                  </td>
+                </tr>
+                <tr ID = "NAIRE_TR_8" >
+                  <td align=right width=36% class=wmax_NaireFont_Bold>* 我同意數位時代/經理人/Shopping Design<br>
+                    網路服務規範&nbsp</td>
+                  <td width=64% class=wmax_NaireFont bgcolor="#FFFFFF">
+                    <input name="naire_9662_8" type=radio value="1" wmx_optionIndex="1" >同意  
+                    <input name="naire_9662_8" type=radio value="2" wmx_optionIndex="2" >不同意  
+                  </td>
+                </tr>
+              </tbody>
+              </table>
+              </td>
+            </tr>
+            </table>
+            <blockquote>
+            <table ID="WMAX_PAGECURSOR" align=center style="display:none">
+              <tbody>
+                <tr>
+                  <td>
+                    <input class=wmax_ButtonBox ID=WMAX_PREVIOUS name=WMAX_PREVIOUS type=button value="前一頁" onClick="DoPrevious()">
+                    <input class=wmax_ButtonBox ID=WMAX_NEXT     name=WMAX_NEXT     type=button value="繼續" onClick="DoNext()">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table ID="WMAX_PAGESUBMIT" align=center>
+              <tbody>
+                <tr>
+                  <td>
+                    <input class=wmax_ButtonBox ID=WMAX_SUBMIT_PREVIOUS name=WMAX_SUBMIT_PREVIOUS type=button value="前一頁" onClick="DoPrevious()" style="display:none" >
+                    <input class=wmax_ButtonBox ID=WMAX_ACCESS name=WMAX_ACCESS type=submit value="送出">
+                    <input class=wmax_ButtonBox ID=WMAX_RESET  name=WMAX_RESET  type=reset  value="重填">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </blockquote>
+<!--   **************** Start Hidden Data Declare **************** //-->
+            <input id=campaign_id name=campaign_id type=hidden value="Project2012">
+            <input id=member_id name=member_id type=hidden value="bnextcom">
+            <input id=naire_id name=naire_id type=hidden value="9662">
+            <input id=next name=next type=hidden value="http://survey.bnext.com.tw/success1.htm">
+            <input id=use_naire name=use_naire type=hidden value="1">
+            <input id=popup_window name=popup_window type=hidden value="0">
+            <input id=popup_width name=popup_width type=hidden value=640>
+            <input id=popup_height name=popup_height type=hidden value=480>
+            <input id=rich_log name=rich_log type=hidden value="0">
+<!--   **************** End Hidden Data Declare **************** //-->
+          </form>
+        </td>
+      </tr>
+      <tr class="wmax_NaireFont">
+        <td>&nbsp;</td>
+      </tr>
+      <tr class="wmax_NaireFont">
+        <td><img src="images/agenda_10.gif" width="950" height="283"></td>
+      </tr>
+    </tbody>
+  </table>
+<!-- WebMAX_Naire_System_Body_End ####Don't Move or Modify this information //-->
+</body>
+</html>
