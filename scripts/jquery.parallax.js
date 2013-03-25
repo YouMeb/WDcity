@@ -51,12 +51,8 @@ $(window).scroll(function(e) {
 			TweenMax.to($('.city3cc') , .0, {alpha:0});
 			TweenMax.to($('.city2cc') , .0, {alpha:0});
 			TweenMax.to($('.city1cc') , .0, {alpha:0,onComplete:afterset1});
-
 		}
-
-
 	}else{
-
 		$('.title1').css({'position':'absolute','top':''})
 		$('.city3c').css({'position':'absolute','bottom':0});
 		$('.city2c').css({'position':'absolute','bottom':0});
@@ -66,6 +62,7 @@ $(window).scroll(function(e) {
 		$('.city1cc').css({'position':'absolute','bottom':0});
 		$('.fct_1').css({'position':'absolute','top':'10%'});
 	}
+	//打飛機
 	function ap1(){
 		$('.city3cc').css({'position':'fixed','bottom':0});
 		$('.city2cc').css({'position':'fixed','bottom':0});
@@ -76,13 +73,14 @@ $(window).scroll(function(e) {
 		TweenMax.to($('.ap') , 10, {alpha:1,top:'-100%',right:'-30%',onComplete:clearoldcld});
 		set1 = 1;
 	}
-
+	//打飛機後刪除原來灰色城市背景和飛機殘駭
 	function clearoldcld(){
 		$('.ap').css('display','none')
 		$('.city3c').css({'display':'none'});
 		$('.city2c').css({'display':'none'});
 		$('.city1c').css({'display':'none'});
 	}
+	//回來場景一
 	function afterset1(){
 		weenMax.to($('.city3cc') , .5, {alpha:1,delay:2});
 		TweenMax.to($('.city2cc') , .5, {alpha:1,delay:1});
@@ -95,15 +93,27 @@ $(window).scroll(function(e) {
 
 		$('.title2').css({'position':'fixed','top':0});
 		$('.MRT').css({'position':'fixed','bottom':0});
+		$('.bike').css({'position':'fixed','bottom':0});
+		$('.train').css({'position':'fixed','bottom':0});
 		$('.fct_2').css({'position':'fixed'});
 		$('.w2').css({'position':'fixed','bottom':'100px'})
+		startbike();
 		
 	}else{
 		$('.title2').css({'position':'absolute','top':''});
 		$('.MRT').css({'position':'absolute','bottom':0});
+		$('.bike').css({'position':'absolute','bottom':0});
+		$('.train').css({'position':'absolute','bottom':0});
+		
 		$('.fct_2').css({'position':'relative','top':'12%'});
 		$('.w2').css({'position':'relative','bottom':0})
 	}
+	function startbike(){
+		TweenMax.to($('.bike') , 10, {right:'200%',delay:1});
+		TweenMax.to($('.train') , 7, {right:'200%',delay:6});
+		TweenMax.to($('.MRT') , 3, {right:'-10%',delay:8.5});
+	}
+
 	if(scroll_position>= (4000-wHeight)){
 		$('.title2').css({'position':'fixed','top':-(scroll_position-(4000-wHeight))})
 		//$('.fct_2').css({'position':'fixed','top':'20%'});
