@@ -763,12 +763,16 @@ h3 {
 	width: 592px;
 	height: 312px;
 	background-image: url('../images/textBK2.png');
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /*IE8*/
+    filter:alpha(opacity=0);  /*IE5、IE5.5、IE6、IE7*/
+    opacity: 0; 
 	margin: 0 auto;
 	margin-top: 50px;
 }
 .ct_2_fr{
 	padding: 40px;
 	width: 512px;
+
 }
 .ct_2_fr p {
 	color: #444;

@@ -45,15 +45,15 @@ $(window).scroll(function(e) {
 		}
 	}
 	if(scroll_position >= 1300 && scroll_position < (2700-wHeight)){
-		$('.city3c').css({'position':'fixed','bottom':0});
-		$('.city2c').css({'position':'fixed','bottom':0});
 		$('.city1c').css({'position':'fixed','bottom':0});
+		$('.city2c').css({'position':'fixed','bottom':0});
+		$('.city3c').css({'position':'fixed','bottom':0});
 		$('.title1').css({'position':'fixed','top':0})
 		$('.fct_1').css({'position':'fixed'});
 		TweenMax.to($('.fct_1') , .5, {'top':'15%'});
-		TweenMax.to($('.city3c') , .5, {alpha:1,delay:2,onComplete:ap1});
+		TweenMax.to($('.city1c') , .5, {alpha:1,delay:2,onComplete:ap1});
 		TweenMax.to($('.city2c') , .5, {alpha:1,delay:1});
-		TweenMax.to($('.city1c') , .5, {alpha:1,delay:0});
+		TweenMax.to($('.city3c') , .5, {alpha:1,delay:0});
 		// if (set1 == 1){
 		// 	TweenMax.to($('.city3cc') , .5, {alpha:1,'display':'block','position':'fixed'});
 		// 	TweenMax.to($('.city2cc') , .5, {alpha:1,'display':'block','position':'fixed'});
@@ -76,9 +76,9 @@ $(window).scroll(function(e) {
 		$('.city3cc').css({'position':'fixed','bottom':0});
 		$('.city2cc').css({'position':'fixed','bottom':0});
 		$('.city1cc').css({'position':'fixed','bottom':0});
-		TweenMax.to($('.city1cc') , .5, {'display':'block',alpha:1,delay:2});
+		TweenMax.to($('.city3cc') , .5, {'display':'block',alpha:1,delay:2});
 		TweenMax.to($('.city2cc') , .5, {'display':'block',alpha:1,delay:2.5});
-		TweenMax.to($('.city3cc') , .5, {'display':'block',alpha:1,delay:3});
+		TweenMax.to($('.city1cc') , .5, {'display':'block',alpha:1,delay:3});
 		TweenMax.to($('.ap') , 10, {alpha:1,top:'-100%',right:'-30%',onComplete:clearoldcld});
 		set1 = 1;
 		}
@@ -92,9 +92,9 @@ $(window).scroll(function(e) {
 	}
 	//回來場景一
 	function afterset1(){
-		TweenMax.to($('.city3cc') , .5, {alpha:1,delay:2});
+		TweenMax.to($('.city1cc') , .5, {alpha:1,delay:2});
 		TweenMax.to($('.city2cc') , .5, {alpha:1,delay:1});
-		TweenMax.to($('.city1cc') , .5, {alpha:1,delay:0});
+		TweenMax.to($('.city3cc') , .5, {alpha:1,delay:0});
 	}
 	if(scroll_position>= (2700-wHeight)){
 		$('.title1').css({'position':'fixed','top':-(scroll_position-(2700-wHeight))})
@@ -108,10 +108,13 @@ $(window).scroll(function(e) {
 		$('.bike').css({'position':'fixed','bottom':0});
 		$('.train').css({'position':'fixed','bottom':0});
 		$('.fct_2').css({'position':'fixed'});
+		
+		TweenMax.to($('.ct_2'), 1, {alpha:1});
 		$('.w2').css({'position':'fixed','bottom':'100px'})
 		startbike();
 		
 	}else{
+		TweenMax.to($('.ct_2'), 1, {alpha:0});
 		$('.title2').css({'position':'absolute','top':''});
 		$('.MRT').css({'position':'absolute','bottom':0});
 		$('.bike').css({'position':'absolute','bottom':0});
