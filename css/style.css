@@ -32,7 +32,7 @@ html, body {
 }
 p {
 	padding-bottom:11px;
-	color:#c0c0c0;
+	/*color:#c0c0c0;*/
 	font-weight:normal;
 }
 a {
@@ -66,7 +66,7 @@ header {
 	position:fixed !important;
 	top:30px;
 	right:0px;
-	z-index:100;
+	z-index:9999;
 	overflow:hidden;
 }
 #home_btn {
@@ -1393,4 +1393,19 @@ margin-left:20px;
     filter:alpha(opacity=0);  /*IE5、IE5.5、IE6、IE7*/
     opacity: 0; 
 	margin-left:49%; 
+}
+
+
+
+.ct_3_fr{
+	padding: 40px;
+	width: 512px;
+		  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /*IE8*/
+    filter:alpha(opacity=0);  /*IE5、IE5.5、IE6、IE7*/
+    opacity: 0; 
+	display: none;
+}
+.ct_3_fr p {
+	color: #444;
+	font-size: 18px;
 }
