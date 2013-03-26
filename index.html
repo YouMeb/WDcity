@@ -385,6 +385,23 @@
 						
 
 						})
+						$('.ch_4_next').bind('click',function(){
+								TweenMax.to($('.c4_f'), .5, {'display':'none',alpha:0,delay:0,onComplete:a3});
+								function a3(){
+									TweenMax.to($('.c4_f2'), .5, {'display':'block',alpha:1});
+								}							
+						})
+						$('.ch_4_back').bind('click',function(){
+
+
+								TweenMax.to($('.c4_f2'), .5, {'display':'none',alpha:0,delay:0,onComplete:a4});
+								function a4(){
+									TweenMax.to($('.c4_f'), .5, {'display':'block',alpha:1});
+								}
+							
+						
+
+						})
 						TweenMax.to($('.ct_2_fr'), .5, {'display':'none',alpha:0,delay:4.5,onComplete:a1});
 						function a1(){
 								TweenMax.to($('.ct_3_fr'), .5, {'display':'block',alpha:1});
@@ -641,17 +658,27 @@
 								</p>
 							</div>
 							<div class="textBK4">
-								<p style="color:#444;font-size:14pt;font-weight:bold;">
-									臺北超有梗！數位設計很熱血
-								</p>
-								<p>活動邀請到6大城市設計師 及1位主持人，暢談他們如何以行動改變城市。現場吸引149人與我們共享一個美好的下午，寫下會後的行動與啟發，持續熱血發酵！<br>
-								<a href="/about/item_4.html">See more，看更多活動成果！</a><p>
-								<p style="color:#444;font-size:14pt;font-weight:bold;">
-									Design Taipei @ 2012 Yahoo!Open Hack
-								</p>
-								<p>
-								與Yahoo Hack Day熱血號召開發者，共62組隊伍參賽，其中23組團隊運用臺北市政府的Open Data挑戰創意極限，相信「程式」可以改善「城市」！<br>
-								<a href="/about/item_5.html">See more，看更多活動成果！</a><p>
+								<div class="ch_4_next">
+									<img src="./images/bbtn4R.png" />
+								</div>
+								<div class="ch_4_back">
+									<img src="./images/bbtn4L.png" />
+								</div>
+								<div class="c4_f">
+									<p style="color:#444;font-size:14pt;font-weight:bold;">
+										臺北超有梗！數位設計很熱血
+									</p>
+									<p>活動邀請到6大城市設計師 及1位主持人，暢談他們如何以行動改變城市。現場吸引149人與我們共享一個美好的下午，寫下會後的行動與啟發，持續熱血發酵！<br>
+									<a href="/about/item_4.html">See more，看更多活動成果！</a><p>
+								</div>
+								<div class="c4_f2">
+									<p style="color:#444;font-size:14pt;font-weight:bold;">
+										Design Taipei @ 2012 Yahoo!Open Hack
+									</p>
+									<p>
+									與Yahoo Hack Day熱血號召開發者，共62組隊伍參賽，其中23組團隊運用臺北市政府的Open Data挑戰創意極限，相信「程式」可以改善「城市」！<br>
+									<a href="/about/item_5.html">See more，看更多活動成果！</a><p>
+								</div>
 							</div>
 							<img src="./images/taipeippl_animation5.gif" class="tppl" />
 						</div>

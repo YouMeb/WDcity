@@ -214,6 +214,29 @@ header {
 	width: 20px;
 
 }
+.ch_4_next{
+	cursor: pointer;
+	margin-right: 30px;
+	float: right;
+	margin-top: 10px;
+	z-index: 999999;
+}
+.ch_4_next img{
+	width: 20px;
+}
+.ch_4_back{
+	z-index: 999999;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-right: 10px;
+	width: 20px;
+	float: right;
+
+}
+.ch_4_back img{
+	width: 20px;
+
+}
 
 .btn-blog span {
 	display:block;
@@ -1512,4 +1535,10 @@ margin-left:20px;
 	top:20%;
 	width: 250px;
 	left: 15%;
+}
+.c4_f2{
+			  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /*IE8*/
+    filter:alpha(opacity=0);  /*IE5、IE5.5、IE6、IE7*/
+    opacity: 0; 
+	display: none;
 }
