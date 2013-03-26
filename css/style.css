@@ -174,20 +174,20 @@ header {
 	box-shadow: 0px;
 }
 #nav .about{
- 	color: #b6be2b;
+ 	/*color: #b6be2b;*/
 }
 #nav .portfolio{
-	color: #F0D300;
+	/*color: #F0D300;*/
 }
 #nav .services{
-	color: #65BFA1;
+	/*color: #65BFA1;*/
 }
 #nav .contact{
-	color: #A4002C;
+	/*color: #A4002C;*/
 
 }
 #nav .world{
-	color: #E94820;
+	/*color: #E94820;*/
 
 }
 .btn-blog span {
@@ -1392,6 +1392,7 @@ margin-left:20px;
 
 #nav li a {
 	z-index: 9999999999;
+	color: #fff;
 }
 .pointer{
 	width: 2%;
