@@ -1,5 +1,5 @@
 <IfModule mod_expires.c>
-ExpiresActive On
+ExpiresActive off
 ExpiresDefault "access plus 4 hours"
 ExpiresByType application/javascript "access plus 1 week"
 ExpiresByType application/x-javascript "access plus 1 week"
