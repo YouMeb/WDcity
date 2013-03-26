@@ -369,39 +369,41 @@
 						}
 
 						$('.ch_2_next').bind('click',function(){
-								TweenMax.to($('.ct_2_fr'), .5, {'display':'none',alpha:0,delay:0,onComplete:a1});
-								function a1(){
-									TweenMax.to($('.ct_3_fr'), .5, {'display':'block',alpha:1});
-								}							
+							TweenMax.to($('.ct_2_fr'), .5, {'display':'none',alpha:0,delay:0,onComplete:a1});
+							function a1(){
+								TweenMax.to($('.ct_3_fr'), .5, {'display':'block',alpha:1});
+							}							
 						})
 						$('.ch_2_back').bind('click',function(){
-
-
-								TweenMax.to($('.ct_3_fr'), .5, {'display':'none',alpha:0,delay:0,onComplete:a2});
-								function a2(){
-									TweenMax.to($('.ct_2_fr'), .5, {'display':'block',alpha:1});
-								}
-							
-						
-
+							TweenMax.to($('.ct_3_fr'), .5, {'display':'none',alpha:0,delay:0,onComplete:a2});
+							function a2(){
+								TweenMax.to($('.ct_2_fr'), .5, {'display':'block',alpha:1});
+							}
 						})
 						$('.ch_4_next').bind('click',function(){
-								TweenMax.to($('.c4_f'), .5, {'display':'none',alpha:0,delay:0,onComplete:a3});
-								function a3(){
-									TweenMax.to($('.c4_f2'), .5, {'display':'block',alpha:1});
-								}							
+							TweenMax.to($('.c4_f'), .5, {'display':'none',alpha:0,delay:0,onComplete:a3});
+							function a3(){
+								TweenMax.to($('.c4_f2'), .5, {'display':'block',alpha:1});
+							}							
 						})
 						$('.ch_4_back').bind('click',function(){
-
-
-								TweenMax.to($('.c4_f2'), .5, {'display':'none',alpha:0,delay:0,onComplete:a4});
-								function a4(){
-									TweenMax.to($('.c4_f'), .5, {'display':'block',alpha:1});
-								}
-							
-						
-
+							TweenMax.to($('.c4_f2'), .5, {'display':'none',alpha:0,delay:0,onComplete:a4});
+							function a4(){
+								TweenMax.to($('.c4_f'), .5, {'display':'block',alpha:1});
+							}
 						})
+						$('.btnup').bind('click',function(){
+							TweenMax.to($('.allpic'), 1, {
+								display : 'block',
+								top : 0,
+								alpha : 1,
+								delay : 0
+							});
+						})
+						TweenMax.to($('.allpic'), 0, {
+							display : 'none',
+							top : ''
+						});
 						// TweenMax.to($('.ct_2_fr'), .5, {'display':'none',alpha:0,delay:4.5,onComplete:a1});
 						// function a1(){
 						// 		TweenMax.to($('.ct_3_fr'), .5, {'display':'block',alpha:1});
@@ -705,6 +707,7 @@
 								<p>
 									每一座WDC都有自己的故事，臺北的故事內容正在如火如荼的開展中。在2016年，我們將會看到，臺北市精彩的銳變。
 								</p>
+								<img src="./images/btnup.png" class="btnup"/>
 							</div>
 							<div class="allpic">
 								<a href="/about/index.html"> <img src="./images/photos.jpg" style="width:100%"/> </a>

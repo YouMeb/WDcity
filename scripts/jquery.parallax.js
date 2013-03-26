@@ -473,12 +473,6 @@ $(window).scroll(function(e) {
 			'top' : 0
 		});
 		//TweenMax.to($('.final_logo') , .5, {display:'block',top:0});
-		TweenMax.to($('.allpic'), 1, {
-			display : 'block',
-			top : 0,
-			alpha : 1,
-			delay : 10
-		});
 		TweenMax.to($('.gb'), 3000, {
 			rotation : -7200
 		});
@@ -489,10 +483,7 @@ $(window).scroll(function(e) {
 			'position' : 'absolute',
 			'top' : ''
 		});
-		TweenMax.to($('.allpic'), 0, {
-			display : 'none',
-			top : ''
-		});
+
 		TweenMax.to($('.final_logo'), 0, {
 			display : 'none',
 			top : '',

@@ -1542,3 +1542,9 @@ margin-left:20px;
     opacity: 0; 
 	display: none;
 }
+.btnup{
+	left: 48%;
+	z-index: 9;
+	cursor: pointer;
+	position: absolute;
+}
