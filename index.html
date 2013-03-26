@@ -21,7 +21,7 @@
 		<link rel="shortcut icon" href="http://inthe7heaven.com/sense./images/fav_icon.ico" type="image/x-icon">
 		<script id="twitter-wjs" src="scripts/widgets.js"></script>
 		<script type="text/javascript" src="scripts/jquery-1.7.min.js"></script>
-		<!--<script type="text/javascript" src="scripts/jquery.queryloader.js"></script>-->
+		<script type="text/javascript" src="scripts/jquery.queryloader.js"></script>
 		<script type="text/javascript" src="scripts/jquery.scrollTo-1.4.3.js"></script>
 		<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
 		<script type="text/javascript" src="scripts/jquery.nav.js"></script>
@@ -335,15 +335,15 @@
 				<script>
 					$(document).ready(function() {
 
-						// $("body").queryLoader2({
-						//     barColor: "#e7ca01",
-						//     backgroundColor: "#fff",
-						//     percentage: true,
-						//     barHeight: 1,
-						//     completeAnimation: "fade",
-						//     minimumTime: 100
-						// });
-						//  $('.gb').animate({"-webkit-transform": "rotate(-180deg)","-moz-transform": "rotate(-180deg)"},300);
+						$("body").queryLoader2({
+						    barColor: "#e7ca01",
+						    backgroundColor: "#fff",
+						    percentage: true,
+						    barHeight: 1,
+						    completeAnimation: "fade",
+						    minimumTime: 100
+						});
+						 $('.gb').animate({"-webkit-transform": "rotate(-180deg)","-moz-transform": "rotate(-180deg)"},300);
 						TweenMax.to($('#nav'), .0, {width : '100%'});
 						TweenMax.to($('header'), .0, {width : '100%'});
 						var $nava = $('#nav').find('a');
