@@ -191,6 +191,30 @@ header {
 	/*color: #E94820;*/
 
 }
+.ch_2_next{
+	cursor: pointer;
+	margin-right: 30px;
+	float: right;
+	margin-top: 10px;
+	z-index: 999999;
+}
+.ch_2_next img{
+	width: 20px;
+}
+.ch_2_back{
+	z-index: 999999;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-right: 10px;
+	width: 20px;
+	float: right;
+
+}
+.ch_2_back img{
+	width: 20px;
+
+}
+
 .btn-blog span {
 	display:block;
 	font-family: 'Cuprum', sans-serif;

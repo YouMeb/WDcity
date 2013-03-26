@@ -368,21 +368,22 @@
 							TweenMax.to($('.world'), .0, {'color': '#fff'});
 						}
 
-						$('.ch_2').bind('click',function(){
-							if($(this).hasClass('active')){
+						$('.ch_2_next').bind('click',function(){
 								TweenMax.to($('.ct_2_fr'), .5, {'display':'none',alpha:0,delay:0,onComplete:a1});
 								function a1(){
-									TweenMax.to($('.ct_3_fr'), .5, {'display':'block',alpha:.5});
+									TweenMax.to($('.ct_3_fr'), .5, {'display':'block',alpha:1});
+								}							
+						})
+						$('.ch_2_back').bind('click',function(){
+
+
+								TweenMax.to($('.ct_3_fr'), .5, {'display':'none',alpha:0,delay:0,onComplete:a2});
+								function a2(){
+									TweenMax.to($('.ct_2_fr'), .5, {'display':'block',alpha:1});
 								}
-								$(this).removeClass('active')
-							}else{
-								TweenMax.to($('.ct_3_fr'), .5, {'display':'none',alpha:0,delay:0,onComplete:a1});
-								function a1(){
-									TweenMax.to($('.ct_2_fr'), .5, {'display':'block',alpha:.5});
-								}
-								$(this).addClass('active');
-							}
 							
+						
+
 						})
 						TweenMax.to($('.ct_2_fr'), .5, {'display':'none',alpha:0,delay:4.5,onComplete:a1});
 						function a1(){
@@ -543,7 +544,12 @@
 					<article class="box-content fct_2">
 						<div class="cc2">
 							<div class="ct_2">
-								<div class="ch_2 active">test</div>
+								<div class="ch_2_next">
+									<img src="./images/btn2R.png" />
+								</div>
+								<div class="ch_2_back">
+									<img src="./images/btn2L.png" />
+								</div>
 								<div class="ct_2_fr">
 									<p style="color:#444;font-size:14pt;font-weight:bold;">
 										和城市一起走過的路，醞釀強大的設計力量
