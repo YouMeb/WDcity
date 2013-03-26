@@ -265,10 +265,7 @@ $(window).scroll(function(e) {
 		$('.fct_2').css({
 			'position' : 'fixed'
 		});
-		TweenMax.to($('.ct_2_fr'), .5, {'display':'none',alpha:0,delay:4.5,onComplete:a1});
-		function a1(){
-				TweenMax.to($('.ct_3_fr'), .5, {'display':'block',alpha:1});
-		}
+
 
 		TweenMax.to($('.ct_2'), 1, {
 			alpha : 1

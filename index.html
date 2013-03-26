@@ -335,17 +335,22 @@
 				<script>
 					$(document).ready(function() {
 
-						$("body").queryLoader2({
-						    barColor: "#e7ca01",
-						    backgroundColor: "#fff",
-						    percentage: true,
-						    barHeight: 1,
-						    completeAnimation: "fade",
-						    minimumTime: 100
-						});
+						// $("body").queryLoader2({
+						//     barColor: "#e7ca01",
+						//     backgroundColor: "#fff",
+						//     percentage: true,
+						//     barHeight: 1,
+						//     completeAnimation: "fade",
+						//     minimumTime: 100
+						// });
 						 $('.gb').animate({"-webkit-transform": "rotate(-180deg)","-moz-transform": "rotate(-180deg)"},300);
 						TweenMax.to($('#nav'), .0, {width : '100%'});
 						TweenMax.to($('header'), .0, {width : '100%'});
+						TweenMax.to($('.about'), .0, {'color': '#b6be2b'});
+						TweenMax.to($('.portfolio'), .0, {'color': '#F0D300'});
+						TweenMax.to($('.services'), .0, {'color': '#65BFA1'});
+						TweenMax.to($('.contact'), .0, {'color': '#A4002C'});
+						TweenMax.to($('.world'), .0, {'color': '#E94820'});
 						var $nava = $('#nav').find('a');
 						TweenMax.to($nava, .0, {width : '100%',marginLeft:'-100%',onComplete:s1});
 						function s1(){
@@ -356,8 +361,33 @@
 							TweenMax.to($('#nav'), 1, {width : '',delay:1});
 							TweenMax.to($('header'), 1, {width : '160px',delay:1});
 							TweenMax.to($nava,1,{marginLeft:'',width:'',delay:1});
+							TweenMax.to($('.about'), .0, {'color': '#fff'});
+							TweenMax.to($('.portfolio'), .0, {'color': '#fff'});
+							TweenMax.to($('.services'), .0, {'color': '#fff'});
+							TweenMax.to($('.contact'), .0, {'color': '#fff'});
+							TweenMax.to($('.world'), .0, {'color': '#fff'});
 						}
-						
+
+						$('.ch_2').bind('click',function(){
+							if($(this).hasClass('active')){
+								TweenMax.to($('.ct_2_fr'), .5, {'display':'none',alpha:0,delay:0,onComplete:a1});
+								function a1(){
+									TweenMax.to($('.ct_3_fr'), .5, {'display':'block',alpha:.5});
+								}
+								$(this).removeClass('active')
+							}else{
+								TweenMax.to($('.ct_3_fr'), .5, {'display':'none',alpha:0,delay:0,onComplete:a1});
+								function a1(){
+									TweenMax.to($('.ct_2_fr'), .5, {'display':'block',alpha:.5});
+								}
+								$(this).addClass('active');
+							}
+							
+						})
+						TweenMax.to($('.ct_2_fr'), .5, {'display':'none',alpha:0,delay:4.5,onComplete:a1});
+						function a1(){
+								TweenMax.to($('.ct_3_fr'), .5, {'display':'block',alpha:1});
+						}
 						
 						// TweenMax.to($nava, 3, {width : '100%','margin-left':'100%','margin-right':'100%'});
 						
@@ -510,6 +540,7 @@
 					<article class="box-content fct_2">
 						<div class="cc2">
 							<div class="ct_2">
+								<div class="ch_2 active">test</div>
 								<div class="ct_2_fr">
 									<p>
 										和城市一起走過的路，醞釀強大的設計力量
@@ -520,13 +551,16 @@
 									<p>
 										漸漸的我們長大，城市也隨著我們悄悄蛻變、不斷提昇、不斷進化。我們體會，生活的美好總是出現在不經意 之處，平日漫步的臺北街頭有了更有趣的風景。城市的角落，正醞釀著強大的設計力量。
 									</p>
+									
 								</div>
 								<div class="ct_3_fr">
 									<p>有304人加入「城市街頭風景大發現」的行列，記錄下557張臺北街頭之美。更有2,254位網友，以10,908次行動支持自己喜歡的街頭風景。</p><br>
 									<p>與《文青相機》合作臺北世界設計之都特別版App，截至2013/2/10下載總次數達17,005；更新次數 180,629。</p>
 									<p><br></p>
 									<p><a href="/about/item_2.html" target="_blank">See more</a>，看更多活動成果！</p>
+									
 								</div>
+								
 							</div>
 
 						</div>
