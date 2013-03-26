@@ -272,7 +272,7 @@ $(window).scroll(function(e) {
 		});
 		$('.w2').css({
 			'position' : 'fixed',
-			'bottom' : '100px'
+			'bottom' : '150px'
 		})
 		startbike();
 
