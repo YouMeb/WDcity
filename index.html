@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="http://inthe7heaven.com/sense/css/fancybox/jquery.fancybox-thumbs.css">
 		<link rel="stylesheet" href="http://inthe7heaven.com/sense/css/fancybox/jquery.fancybox.css"> -->
 		<link rel="icon" href="favi.ico" type="image/x-icon">
-		
+
 		<script id="twitter-wjs" src="scripts/widgets.js"></script>
 		<script type="text/javascript" src="scripts/jquery-1.7.min.js"></script>
 		<script type="text/javascript" src="scripts/jquery.queryloader.js"></script>
@@ -148,9 +148,9 @@
 			})
 		</script>
 		<style>
-/*			img {
-				-webkit-transform: translateZ(0);
-			}*/
+			/*			img {
+			 -webkit-transform: translateZ(0);
+			 }*/
 			article, section {
 				/*-webkit-transform: translate3d(0,0,0); */
 			}
@@ -223,7 +223,7 @@
 				/**
 				 *
 				 */
-				-webkit-box-flex: 1; 
+				-webkit-box-flex: 1;
 				-moz-box-flex: 1;
 				box-flex: 1;
 				-webkit-flex: 1;
@@ -237,7 +237,7 @@
 				/**
 				 *
 				 */
-				float: left; 
+				float: left;
 				margin: 0;
 				/**
 				 *
@@ -270,13 +270,13 @@
 			}
 			.social_map .fb {
 				position: absolute;
-				top: 4%;
-				left: 32%;
+				top: -7%;
+				left: 35%;
 			}
 			.social_map #pop_fb {
 				position: absolute;
-				top: 0%;
-				left: 37%;
+				top: -10%;
+				left: 39%;
 			}
 			.social_map .pinterest {
 				position: absolute;
@@ -290,13 +290,31 @@
 			}
 			.social_map .youtube {
 				position: absolute;
-				top: 86%;
-				left: 45%;
+				top: 101%;
+				left: 51%;
 			}
 			.social_map #pop_youtube {
 				position: absolute;
-				top: 86%;
-				left: 27%;
+				top: 100%;
+				left: 34%;
+			}
+
+			@media only screen and (min-width: 768px) and (max-width: 1024px) {
+				.social_map #pop_fb {
+					position: absolute;
+					top: -12%;
+					left: 43%;
+				}
+				.social_map #pop_pinterest {
+					position: absolute;
+					top: 70%;
+					left: -26%;
+				}
+				.social_map #pop_youtube {
+					position: absolute;
+					top: 100%;
+					left: 22%;
+				}
 			}
 		</style>
 	</head>
@@ -343,56 +361,143 @@
 						//     completeAnimation: "fade",
 						//     minimumTime: 100
 						// });
-						 $('.gb').animate({"-webkit-transform": "rotate(-180deg)","-moz-transform": "rotate(-180deg)"},300);
-						TweenMax.to($('#nav'), .0, {width : '100%'});
-						TweenMax.to($('header'), .0, {width : '100%'});
-						TweenMax.to($('.about'), .0, {'color': '#b6be2b'});
-						TweenMax.to($('.portfolio'), .0, {'color': '#F0D300'});
-						TweenMax.to($('.services'), .0, {'color': '#65BFA1'});
-						TweenMax.to($('.contact'), .0, {'color': '#A4002C'});
-						TweenMax.to($('.world'), .0, {'color': '#E94820'});
+						$('.gb').animate({
+							"-webkit-transform" : "rotate(-180deg)",
+							"-moz-transform" : "rotate(-180deg)"
+						}, 300);
+						TweenMax.to($('#nav'), .0, {
+							width : '100%'
+						});
+						TweenMax.to($('header'), .0, {
+							width : '100%'
+						});
+						TweenMax.to($('.about'), .0, {
+							'color' : '#b6be2b'
+						});
+						TweenMax.to($('.portfolio'), .0, {
+							'color' : '#F0D300'
+						});
+						TweenMax.to($('.services'), .0, {
+							'color' : '#65BFA1'
+						});
+						TweenMax.to($('.contact'), .0, {
+							'color' : '#A4002C'
+						});
+						TweenMax.to($('.world'), .0, {
+							'color' : '#E94820'
+						});
 						var $nava = $('#nav').find('a');
-						TweenMax.to($nava, .0, {width : '100%',marginLeft:'-100%',onComplete:s1});
-						function s1(){
-							TweenMax.to($nava, 2, {width : '100%',marginLeft:'100%',delay:2,onComplete:s2});
-							TweenMax.to($('header'), 1, {width : '0%',delay:4.2});
-						}
-						function s2(){
-							TweenMax.to($('#nav'), 1, {width : '',delay:1});
-							TweenMax.to($('header'), 1, {width : '160px',delay:1});
-							TweenMax.to($nava,1,{marginLeft:'',width:'',delay:1});
-							TweenMax.to($('.about'), .0, {'color': '#fff'});
-							TweenMax.to($('.portfolio'), .0, {'color': '#fff'});
-							TweenMax.to($('.services'), .0, {'color': '#fff'});
-							TweenMax.to($('.contact'), .0, {'color': '#fff'});
-							TweenMax.to($('.world'), .0, {'color': '#fff'});
+						TweenMax.to($nava, .0, {
+							width : '100%',
+							marginLeft : '-100%',
+							onComplete : s1
+						});
+						function s1() {
+							TweenMax.to($nava, 2, {
+								width : '100%',
+								marginLeft : '100%',
+								delay : 2,
+								onComplete : s2
+							});
+							TweenMax.to($('header'), 1, {
+								width : '0%',
+								delay : 4.2
+							});
 						}
 
-						$('.ch_2_next').bind('click',function(){
-							TweenMax.to($('.ct_2_fr'), .5, {'display':'none',alpha:0,delay:0,onComplete:a1});
-							function a1(){
-								TweenMax.to($('.ct_3_fr'), .5, {'display':'block',alpha:1});
-							}							
-						})
-						$('.ch_2_back').bind('click',function(){
-							TweenMax.to($('.ct_3_fr'), .5, {'display':'none',alpha:0,delay:0,onComplete:a2});
-							function a2(){
-								TweenMax.to($('.ct_2_fr'), .5, {'display':'block',alpha:1});
+						function s2() {
+							TweenMax.to($('#nav'), 1, {
+								width : '',
+								delay : 1
+							});
+							TweenMax.to($('header'), 1, {
+								width : '160px',
+								delay : 1
+							});
+							TweenMax.to($nava, 1, {
+								marginLeft : '',
+								width : '',
+								delay : 1
+							});
+							TweenMax.to($('.about'), .0, {
+								'color' : '#fff'
+							});
+							TweenMax.to($('.portfolio'), .0, {
+								'color' : '#fff'
+							});
+							TweenMax.to($('.services'), .0, {
+								'color' : '#fff'
+							});
+							TweenMax.to($('.contact'), .0, {
+								'color' : '#fff'
+							});
+							TweenMax.to($('.world'), .0, {
+								'color' : '#fff'
+							});
+						}
+
+
+						$('.ch_2_next').bind('click', function() {
+							TweenMax.to($('.ct_2_fr'), .5, {
+								'display' : 'none',
+								alpha : 0,
+								delay : 0,
+								onComplete : a1
+							});
+							function a1() {
+								TweenMax.to($('.ct_3_fr'), .5, {
+									'display' : 'block',
+									alpha : 1
+								});
 							}
+
 						})
-						$('.ch_4_next').bind('click',function(){
-							TweenMax.to($('.c4_f'), .5, {'display':'none',alpha:0,delay:0,onComplete:a3});
-							function a3(){
-								TweenMax.to($('.c4_f2'), .5, {'display':'block',alpha:1});
-							}							
-						})
-						$('.ch_4_back').bind('click',function(){
-							TweenMax.to($('.c4_f2'), .5, {'display':'none',alpha:0,delay:0,onComplete:a4});
-							function a4(){
-								TweenMax.to($('.c4_f'), .5, {'display':'block',alpha:1});
+						$('.ch_2_back').bind('click', function() {
+							TweenMax.to($('.ct_3_fr'), .5, {
+								'display' : 'none',
+								alpha : 0,
+								delay : 0,
+								onComplete : a2
+							});
+							function a2() {
+								TweenMax.to($('.ct_2_fr'), .5, {
+									'display' : 'block',
+									alpha : 1
+								});
 							}
+
 						})
-						$('.btnup').bind('click',function(){
+						$('.ch_4_next').bind('click', function() {
+							TweenMax.to($('.c4_f'), .5, {
+								'display' : 'none',
+								alpha : 0,
+								delay : 0,
+								onComplete : a3
+							});
+							function a3() {
+								TweenMax.to($('.c4_f2'), .5, {
+									'display' : 'block',
+									alpha : 1
+								});
+							}
+
+						})
+						$('.ch_4_back').bind('click', function() {
+							TweenMax.to($('.c4_f2'), .5, {
+								'display' : 'none',
+								alpha : 0,
+								delay : 0,
+								onComplete : a4
+							});
+							function a4() {
+								TweenMax.to($('.c4_f'), .5, {
+									'display' : 'block',
+									alpha : 1
+								});
+							}
+
+						})
+						$('.btnup').bind('click', function() {
 							TweenMax.to($('.allpic'), 1, {
 								display : 'block',
 								top : 0,
@@ -408,11 +513,8 @@
 						// function a1(){
 						// 		TweenMax.to($('.ct_3_fr'), .5, {'display':'block',alpha:1});
 						// }
-						
-						// TweenMax.to($nava, 3, {width : '100%','margin-left':'100%','margin-right':'100%'});
-						
-						
 
+						// TweenMax.to($nava, 3, {width : '100%','margin-left':'100%','margin-right':'100%'});
 
 						var wHeight1 = $(window).height();
 						var width1 = $(window).width();
@@ -445,7 +547,7 @@
 							delay : 5
 						});
 						TweenMax.to($('.pointer'), 3, {
-							marginTop : yh+300,
+							marginTop : yh + 300,
 							alpha : 1,
 							delay : 5
 						});
@@ -487,7 +589,7 @@
 									在社會設計的氛圍下，臺北市「2016 WDC Taipei」政策將落實「以人為本的設計」（Design is People）理念，一方面實踐「社會設計」（Social Design）的時代發展潮流，另一方面以「設計是現代公民應有的生活素養」作為推廣目標， 讓市民廣泛的認識設計，感受設計、享受設計。
 								<p class="fp" style="color:#444;font-size:14pt;font-weight:bold;">
 									關於Adaptive City
-								</p>	
+								</p>
 								<p>
 									Adaptive City的核心理念是，城市治理必須勇於創新與追求卓越。面對發展上的種種挑戰，唯有不斷求新求變，運用具有前瞻性的創新思維與作法，城市才能為市民帶來更美好的生活。我們透過多元社群、數位行動工具、實體的能量引爆，動員線上到線下大社群，凝聚了眾人的智慧和參與。
 								</p>
@@ -579,23 +681,31 @@
 									<p>
 										漸漸的我們長大，城市也隨著我們悄悄蛻變、不斷提昇、不斷進化。我們體會，生活的美好總是出現在不經意 之處，平日漫步的臺北街頭有了更有趣的風景。城市的角落，正醞釀著強大的設計力量。
 									</p>
-									
+
 								</div>
 								<div class="ct_3_fr">
 
 									<p style="color:#444;font-size:14pt;font-weight:bold;">
 										城市街頭風景大發現
 									</p>
-									<p>有304人加入「城市街頭風景大發現」的行列，記錄下557張臺北街頭之美。更有2,254位網友，以10,908次行動支持自己喜歡的街頭風景。與《文青相機》合作臺北世界設計之都特別版App，截至2013/2/10下載總次數達17,005；更新次數 180,629。</p>
-									<p><a href="/about/item_2.html" target="_blank">See more，看更多活動成果！</a></p>
+									<p>
+										有304人加入「城市街頭風景大發現」的行列，記錄下557張臺北街頭之美。更有2,254位網友，以10,908次行動支持自己喜歡的街頭風景。與《文青相機》合作臺北世界設計之都特別版App，截至2013/2/10下載總次數達17,005；更新次數 180,629。
+									</p>
+									<p>
+										<a href="/about/item_2.html" target="_blank">See more，看更多活動成果！</a>
+									</p>
 									<p style="color:#444;font-size:14pt;font-weight:bold;">
 										設計讓臺北不一樣
 									</p>
-									<p>還有15,567人體驗「設計讓臺北不一樣」的城市魅力，共計37,397次遊戲次數，超過24,082次的活動分享，總計帶動粉絲團人數成長至32,786人。（截自2013年3月25日）</p>
-									<p><a href="/about/item_3.html" target="_blank">See more，看更多活動成果！</a></p>
+									<p>
+										還有15,567人體驗「設計讓臺北不一樣」的城市魅力，共計37,397次遊戲次數，超過24,082次的活動分享，總計帶動粉絲團人數成長至32,786人。（截自2013年3月25日）
+									</p>
+									<p>
+										<a href="/about/item_3.html" target="_blank">See more，看更多活動成果！</a>
+									</p>
 
 								</div>
-								
+
 							</div>
 
 						</div>
@@ -629,12 +739,18 @@
 
 							<div>
 								<div class="social_map">
-									<img src="./images/logos4.png" id="logos" class="logos elem_opacity"/>
-									<img src="./images/fb.png" id="social_fb" class="fb elem_opacity animated" href="www.facebook.com"/>
+									<img src="./images/logos4.png" id="logos" class="logos elem_opacity" />
+									<a href="https://www.facebook.com/taipeidesign" target="_blank">
+										<img src="./images/fb.png" id="social_fb" class="js-linkto fb elem_opacity animated" />
+									</a>
 									<img src="./images/fbBK.png" id="pop_fb" class="elem_opacity animated" style="max-width: 200px;" />
-									<img src="./images/youtube.png" id="social_youtube" class="youtube elem_opacity animated" href="www.youtube.com.tw"/>
+									<a href="http://www.youtube.com/user/2016WDCTaipei" target="_blank">
+										<img src="./images/youtube.png" id="social_youtube" class="js-linkto youtube elem_opacity animated" />
+									</a>
 									<img src="./images/youtubeBK.png" id="pop_youtube" class="elem_opacity animated" style="max-width: 200px;" />
-									<img src="./images/pinterest.png" id="social_pinterest" class="pinterest elem_opacity animated" href="www.pinterest.com"/>
+									<a href="http://pinterest.com/2016wdctaipei/" target="_blank">
+										<img src="./images/pinterest.png" id="social_pinterest" class="js-linkto pinterest elem_opacity animated" />
+									</a>
 									<img src="./images/pinBK.png" id="pop_pinterest" class="elem_opacity animated" style="max-width: 200px;" />
 								</div>
 							</div>
@@ -648,7 +764,7 @@
 					<article class="box-content fct_4">
 						<div class="cc4">
 							<div class="ct_4">
-							<p style="color:#444;font-size:14pt;font-weight:bold;">
+								<p style="color:#444;font-size:14pt;font-weight:bold;">
 									設計能量，熱血實踐
 								</p>
 								<p>
@@ -670,16 +786,21 @@
 									<p style="color:#444;font-size:14pt;font-weight:bold;">
 										臺北超有梗！數位設計很熱血
 									</p>
-									<p>活動邀請到6大城市設計師 及1位主持人，暢談他們如何以行動改變城市。現場吸引149人與我們共享一個美好的下午，寫下會後的行動與啟發，持續熱血發酵！<br>
-									<a href="/about/item_4.html">See more，看更多活動成果！</a><p>
+									<p>
+										活動邀請到6大城市設計師 及1位主持人，暢談他們如何以行動改變城市。現場吸引149人與我們共享一個美好的下午，寫下會後的行動與啟發，持續熱血發酵！
+										<br>
+										<a href="/about/item_4.html">See more，看更多活動成果！</a>
+									<p>
 								</div>
 								<div class="c4_f2">
 									<p style="color:#444;font-size:14pt;font-weight:bold;">
 										Design Taipei @ 2012 Yahoo!Open Hack
 									</p>
 									<p>
-									與Yahoo Hack Day熱血號召開發者，共62組隊伍參賽，其中23組團隊運用臺北市政府的Open Data挑戰創意極限，相信「程式」可以改善「城市」！<br>
-									<a href="/about/item_5.html">See more，看更多活動成果！</a><p>
+										與Yahoo Hack Day熱血號召開發者，共62組隊伍參賽，其中23組團隊運用臺北市政府的Open Data挑戰創意極限，相信「程式」可以改善「城市」！
+										<br>
+										<a href="/about/item_5.html">See more，看更多活動成果！</a>
+									<p>
 								</div>
 							</div>
 							<img src="./images/taipeippl_animation5.gif" class="tppl" />
@@ -724,7 +845,6 @@
 						<img src="./images/bg5.png" class="bgg4"/>
 						<img src="./images/bg5.png" class="bgg5"/>
 					</article>
-					
 
 					<!-- <div class="final_log">
 					<img src="/img/index_logo.png"/>
@@ -735,6 +855,8 @@
 		</div>
 
 		<script>
+			$(function() {
+			});
 			// document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 		</script>
 	</body>
