@@ -84,7 +84,7 @@ $(window).scroll(function(e) {
 			});
 		}
 	}
-	if (scroll_position >= 1300 && scroll_position < (2700 - wHeight)) {
+	if (scroll_position >= 1300 && scroll_position < (2700 - wHeight)&& passst1 == 0) {
 		$('.city1c').css({
 			'position' : 'fixed',
 			'bottom' : 0
@@ -237,6 +237,7 @@ $(window).scroll(function(e) {
 		})
 	}
 	if (scroll_position >= 2700 && scroll_position <= (4000 - wHeight)) {
+		passst1 = 1;
 		$('.city3cc').css({
 			'display' : 'none'
 		});

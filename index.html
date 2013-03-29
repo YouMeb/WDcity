@@ -113,6 +113,7 @@
 			});
 		</script>
 		<script type="text/javascript">
+			var passst1 = 0;
 			$(document).ready(function() {
 				$('#nav').onePageNav();
 				$('#next_btn').localScroll();
@@ -145,6 +146,18 @@
 					$('#contact').parallax("50%", 6400, 0.1, true);
 					$('#world').parallax("50%", 7600, 0.1, true);
 				}
+				$('.portfolio').bind('click',function(){
+					passst1 = 1;
+				});
+				$('.services').bind('click',function(){
+					passst1 = 1;
+				});
+				$('.contact').bind('click',function(){
+					passst1 = 1;
+				});
+				$('.world').bind('click',function(){
+					passst1 = 1;
+				})
 			})
 		</script>
 		<style>
