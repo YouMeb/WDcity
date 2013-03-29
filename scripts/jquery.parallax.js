@@ -229,6 +229,27 @@ $(window).scroll(function(e) {
 			delay : 0
 		});
 	}
+	if (scroll_position >= 1300 && scroll_position < (2700 - wHeight)&& passst1 == 1) {
+			$('.city3cc').css({
+				'display':'block',
+				'position' : 'fixed',
+				'opacity':1,
+				'bottom' : 0
+			});
+			$('.city2cc').css({
+				'display':'block',
+				'position' : 'fixed',
+				'opacity':1,
+				'bottom' : 0
+			});
+			$('.city1cc').css({
+				'display':'block',
+				'position' : 'fixed',
+				'opacity':1,
+				'bottom' : 0
+			});
+
+	}
 
 	if (scroll_position >= (2700 - wHeight)) {
 		$('.title1').css({
