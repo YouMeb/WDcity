@@ -408,6 +408,10 @@ $(window).scroll(function(e) {
 
 			}, function() {
 			});
+			$('#pop_camera').addClass('bounceIn').removeClass('elem_opacity').on('webkitAnimationEnd', '', {
+
+			}, function() {
+			});
 		}, 5000);
 
 	} else {

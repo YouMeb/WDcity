@@ -8,17 +8,14 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
 		<title>Taipei Design City</title>
 		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
 		<link href="css/style.css" rel="stylesheet" type="text/css">
 		<link href="http://wdctaipei.mobileweb.com.tw//assset/module/css3/animate.css/animate.css" rel="stylesheet" type="text/css">
-
 		<!-- <link rel="stylesheet" href="http://inthe7heaven.com/sense/css/fancybox/jquery.fancybox-buttons.css">
 		<link rel="stylesheet" href="http://inthe7heaven.com/sense/css/fancybox/jquery.fancybox-thumbs.css">
 		<link rel="stylesheet" href="http://inthe7heaven.com/sense/css/fancybox/jquery.fancybox.css"> -->
 		<link rel="icon" href="favi.ico" type="image/x-icon">
-
 		<script id="twitter-wjs" src="scripts/widgets.js"></script>
 		<script type="text/javascript" src="scripts/jquery-1.7.min.js"></script>
 		<script type="text/javascript" src="scripts/jquery.queryloader.js"></script>
@@ -53,10 +50,10 @@
 		</div>
 		<![endif]-->
 		<script type="text/javascript">
-			if ($(window).width() > 1024) {
-				document.write("<" + "script src='scripts/jquery.parallax.js'></" + "script>");
-				document.write("<" + "script  src='scripts/jquery.parallax-1.1.js'></" + "script>");
-			}
+			// if ($(window).width() > 1024) {
+			// 	document.write("<" + "script src='scripts/jquery.parallax.js'></" + "script>");
+			// 	document.write("<" + "script  src='scripts/jquery.parallax-1.1.js'></" + "script>");
+			// }
 		</script><script src="scripts/jquery.parallax.js"></script><script src="scripts/jquery.parallax-1.1.js"></script>
 		<script>
 			var ua = navigator.userAgent.toLocaleLowerCase(), regV = /ipod|ipad|iphone/gi, result = ua.match(regV), userScale = "";
@@ -121,21 +118,21 @@
 				$('#home_btn').localScroll();
 				$('#button_2').localScroll();
 
-				$x = $(window).width();
-				if ($x <= 1024) {
-					$("#main-content").css({
-						position : 'relative'
-					});
-					$("#home,#about,#portfolio,#services,#contact,# 6.5").css({
-						backgroundAttachment : 'scroll'
-					});
-				}
-				if ($x <= 480) {
-					$("#nav a").on("click", function() {
-						$("#box-nav").slideToggle();
-					});
-				}
-				if ($x > 1024) {
+				// $x = $(window).width();
+				// if ($x <= 1024) {
+				// 	$("#main-content").css({
+				// 		position : 'relative'
+				// 	});
+				// 	$("#home,#about,#portfolio,#services,#contact,# 6.5").css({
+				// 		backgroundAttachment : 'scroll'
+				// 	});
+				// }
+				// if ($x <= 480) {
+				// 	$("#nav a").on("click", function() {
+				// 		$("#box-nav").slideToggle();
+				// 	});
+				// }
+				//if ($x > 1024) {
 					$("#main-content").css({
 						position : 'fixed'
 					});
@@ -145,7 +142,7 @@
 					$('#services').parallax("50%", 5200, 0.1, true);
 					$('#contact').parallax("50%", 6400, 0.1, true);
 					$('#world').parallax("50%", 7600, 0.1, true);
-				}
+				//}
 				$('.portfolio').bind('click',function(){
 					passst1 = 1;
 				});
@@ -298,8 +295,13 @@
 			}
 			.social_map #pop_pinterest {
 				position: absolute;
-				top: 73%;
+				top: 63%;
 				left: -14%;
+			}
+			.social_map #pop_camera {
+				position: absolute;
+				top: 70%;
+				left: 64%;
 			}
 			.social_map .youtube {
 				position: absolute;
@@ -765,6 +767,7 @@
 										<img src="./images/pinterest.png" id="social_pinterest" class="js-linkto pinterest elem_opacity animated" />
 									</a>
 									<img src="./images/pinBK.png" id="pop_pinterest" class="elem_opacity animated" style="max-width: 200px;" />
+									<img src="./images/cameraBK.png" id="pop_camera" class="elem_opacity animated" style="max-width: 200px;" />
 								</div>
 							</div>
 						</div>
